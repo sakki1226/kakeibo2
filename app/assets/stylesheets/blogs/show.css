@@ -1,0 +1,18 @@
+.date{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 ;
+}
+
+.income-header {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+.expense-header {
+  text-align: center;
+}

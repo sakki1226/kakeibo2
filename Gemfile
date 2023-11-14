@@ -76,3 +76,6 @@ end
 
 gem 'devise'
 gem 'pry-rails'
+gem "simple_calendar", "~> 2.4"
+gem 'sassc'
+gem 'active_hash'

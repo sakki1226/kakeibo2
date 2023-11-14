@@ -1,0 +1,36 @@
+.income_expense_manthly_total{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.month_list {
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.income_expense_manthly_total{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+tr:nth-child(odd) {
+  background-color: #f8f6f2; 
+}
+
+tr:nth-child(even) {
+  background-color: #fff; /
+}
+
+.variable_expense {
+  background-color: #FFC0CB; /* 例：ピンク色 */
+}
+
+.fixed_expense {
+  background-color: #ADD8E6; /* 例：青色 */
+}
+

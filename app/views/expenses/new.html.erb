@@ -1,0 +1,36 @@
+<div class ="expense-main">
+
+  <h1>支出の登録</h1>
+
+  <div class="expense-form">
+
+    <%= form_with(model: @expense, local: true) do |f| %>
+
+      <div class="title">
+        <div class="form-tag">支出の種類</div>
+        <%= f.collection_select(:expense_category_id, ExpenseCategory.all, :id, :name, {}) %>
+      </div>
+
+      <div class="title">
+        <div class="form-tag">支払い方法</div>
+        <%= f.collection_select(:payment_method_id, PaymentMethod.all, :id, :name, {}) %>
+      </div>
+
+
+      <div class="content">
+        <div class="form-tag">金額</div>
+        <%= f.text_field :price %>
+      </div>
+
+      <div class="time">
+        <div class="form-tag">時間</div>
+        <%= f.date_select :date %>
+      </div>
+
+      <div class="submit">
+          <%= f.submit %>
+      </div>
+    <% end %>
+    </div>
+
+    <br>

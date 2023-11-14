@@ -6,14 +6,14 @@
 
   <br>
   <div class="col-md-8">
-    <%= month_calendar events: @expenses_by_date do |date, expenses| %>
-      <%= link_to home_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }) do %>
+    <%= month_calendar events: @blogs do |date, blogs| %>
+      <%= link_to blog_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }) do %>
         <%= date.day %>
       <% end %>
       <br>
       <br>
 
-      <% total_expense = expenses %> <!-- @expenses_by_date がイベントごとに金額のハッシュを持っているため、expenses をそのまま使用 -->
+      <% total_expense = @expenses_by_date[date]  %>
       <% if total_expense.present? %>  
         <div class="total_price">
           <%= total_expense %> 円
@@ -22,4 +22,3 @@
     <% end %>
   </div>
 </div>
-

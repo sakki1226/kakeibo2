@@ -1,0 +1,31 @@
+<div class ="income-main">
+
+  <h1>収入の登録</h1>
+
+  <div class="income-form">
+
+    <%= form_with(model: @income, local: true) do |f| %>
+
+      <div class="title">
+        <div class="form-tag">収入の種類</div>
+        <%= f.collection_select(:income_category_id, IncomeCategory.all, :id, :name, {}) %>
+      </div>
+
+
+      <div class="content">
+        <div class="form-tag">金額</div>
+        <%= f.text_field :price %>
+      </div>
+
+      <div class="time">
+        <div class="form-tag">時間</div>
+        <%= f.date_select :date %>
+      </div>
+
+      <div class="submit">
+          <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
