@@ -1,27 +1,19 @@
 <h1><%= "#{@year}年#{@month}月" %></h1>
 
 <div class= "income_expense_manthly_total">
-  <p>収入合計: <%= @total_income %> 円</p>
-  <p>支出合計: <%= @total_expense %> 円</p>
+  <p>収入合計: <%= @total_income_by_family %> 円</p>
+  <p>支出合計: <%= @total_expense_by_family %> 円</p>
 </div>
-
 
 <div class="month_list">
   <table width="1500" border="1" align="center">
     <thead>
       <tr>
         <th>日付</th>
-        <!-- 変動費のカテゴリーを表示 -->
-        <% ExpenseCategory.where(id: 2..9).each do |category| %>
-          <th class="variable_expense"><%= category.name %></th>
+        <% ExpenseCategory.where(id: 2..16).each do |category| %>
+          <th><%= category.name %></th>
         <% end %>
-        <!-- 固定費のカテゴリーを表示 -->
-        <% ExpenseCategory.where(id: 10..16).each do |category| %>
-          <th class="fixed_expense"><%= category.name %></th>
-        <% end %>
-        <th>金額</th>
-        <th>残額</th>
-        <!-- 他に必要な列があれば追加してください -->
+        <th>合計</th>
       </tr>
     </thead>
     <tbody>
@@ -29,30 +21,33 @@
         <% if Date.valid_date?(@year, @month, day) %>
           <tr>
             <td align="center"><%= "#{day}" %>日</td>
-            <% ExpenseCategory.where.not(id: 1).each do |category| %>
+            <% total_price = 0 %>
+            <% ExpenseCategory.where(id: 2..16).each do |category| %>
               <td align="center">
-                <% expenses = @expenses.where(date: "#{@year}-#{@month}-#{day}", expense_category_id: category.id) %>
-                <% total_price = expenses.sum(:price) %>
-                <% if total_price > 0 %>
-                  <%= total_price %>円
+                <% if @expenses.present? %>
+                  <% filtered_expenses = @expenses.where(date: "#{@year}-#{@month}-#{day}", expense_category_id: category.id) %>
+                  <% price = filtered_expenses.sum(:price) %>
+                  <% if price > 0 %>
+                    <% total_price += price %>
+                    <%= price %>円
+                  <% end %>
                 <% end %>
               </td>
             <% end %>
-            <% total_price = @expenses.where(date: "#{@year}-#{@month}-#{day}").sum(:price) %>
             <td align="right"><%= total_price %>円</td>
           </tr>
         <% end %>
       <% end %>
-      <td align="center">合計</td>
-      <% ExpenseCategory.where.not(id: 1).each do |category| %>
-        <td align="center">
+      <tr>
+        <td align="center">合計</td>
+        <% ExpenseCategory.where(id: 2..16).each do |category| %>
           <% total_price = @expenses.where(expense_category_id: category.id).sum(:price) %>
-          <%= total_price %>円
-        </td>
-      <% end %>
-      <td align="right">
+          <td align="center"><%= total_price %>円</td>
+        <% end %>
+        <td align="right">
         <%= @expenses.sum(:price) %>円
       </td>
+      </tr>
     </tbody>
   </table>
 </div>

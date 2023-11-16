@@ -47,3 +47,10 @@
 .simple-calendar th {
   text-align: center;
 }
+
+.prev-month a {
+  display: none;
+}
+.next-month a {
+  display: none;
+}
