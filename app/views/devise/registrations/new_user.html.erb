@@ -1,7 +1,6 @@
 <h2>Sign up</h2>
 
 <%= form_with model:@family_user, url: users_create_user_path, class: 'registration-main', local: true do |f| %>
-  <%= render "devise/shared/error_messages", resource: @family_user %>
 
   
   <div class='form-wrap'>
@@ -51,5 +50,3 @@
   <%= link_to "前へ", new_user_registration_path %>
 </div>
 
-
-<%= render "devise/shared/links" %>
