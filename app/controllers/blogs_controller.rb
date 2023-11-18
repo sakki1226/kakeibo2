@@ -41,8 +41,8 @@ class BlogsController < ApplicationController
 
     # 各家族の収入と支出を計算
     family_users.each do |user|
-      incomes = user.incomes.where("YEAR(date) = ? AND MONTH(date) = ?", @year, @month)
-      expenses = user.expenses.where("YEAR(date) = ? AND MONTH(date) = ?", @year, @month)
+      incomes = user.incomes.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1))
+      expenses = user.expenses.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1))
 
       @total_income_by_family += incomes.sum(:price)
       @total_expense_by_family += expenses.sum(:price)
