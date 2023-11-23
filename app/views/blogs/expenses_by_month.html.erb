@@ -51,6 +51,7 @@
       <% end %>
       <tr>
         <td align="center">合計</td>
+        <td></td>
         <% ExpenseCategory.where(id: 2..16).each do |category| %>
           <% total_price = @expenses.where(expense_category_id: category.id).sum(:price) %>
           <td align="center"><%= total_price %>円</td>
