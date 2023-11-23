@@ -2,56 +2,59 @@
   <%= @date %>
 </div>
 
-<div class="dairy_form">
-  <div class="income-table">
-    <div class="income-header">収入</div>
-      <div class="list">
-        <table width="800" border="1" align="center">
-          <thead>
-            <tr>
-              <th>ユーザー</th>
-              <th>種類</th>
-              <th>金額</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @incomes.each do |income| %>
-              <tr>
-                <td align="center"><%= income.user.nickname %></td>
-                <td align="center"><%= IncomeCategory.find(income.income_category_id).name %></td>
-                <td align="center"><%= income.price %> 円</td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="expense-table">
-    <h2 class="expense-header">支出</h2>
+<div class="income-table">
+  <div class="income-header">収入</div>
+  <div class="list">
     <table width="800" border="1" align="center">
       <thead>
         <tr>
           <th>ユーザー</th>
           <th>種類</th>
-          <th>支払方法</th>
           <th>金額</th>
-          
-          
         </tr>
       </thead>
       <tbody>
-        <% @expenses.each do |expense| %>
+        <% @incomes.each do |income| %>
           <tr>
-            <td align="center"><%= expense.user.nickname %></td>
-            <td align="center"><%= ExpenseCategory.find(expense.expense_category_id).name %></td>
-            <td align="center"><%= PaymentMethod.find(expense.payment_method_id).name %></td>
-            <td align="center"><%= expense.price %> 円</td>
-            
+            <td align="center"><%= income.user.nickname %></td>
+            <td align="center"><%= IncomeCategory.find(income.income_category_id).name %></td>
+            <td align="center"><%= income.price %> 円</td>
+            <td align="center">
+              <%= link_to '編集', edit_income_path(income)  %>
+              <%= link_to '削除', income_path(income), data: { turbo_method: :delete }  %>
+              
+            </td>            
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
+</div>
+
+<div class="expense-table">
+  <h2 class="expense-header">支出</h2>
+  <table width="800" border="1" align="center">
+    <thead>
+      <tr>
+        <th>ユーザー</th>
+        <th>種類</th>
+        <th>支払方法</th>
+        <th>金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @expenses.each do |expense| %>
+        <tr>
+          <td align="center"><%= expense.user.nickname %></td>
+          <td align="center"><%= ExpenseCategory.find(expense.expense_category_id).name %></td>
+          <td align="center"><%= PaymentMethod.find(expense.payment_method_id).name %></td>
+          <td align="center"><%= expense.price %> 円</td>
+          <td align="center">
+            <%= link_to '編集', edit_expense_path(expense)  %>
+            <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }  %>
+          </td>          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
