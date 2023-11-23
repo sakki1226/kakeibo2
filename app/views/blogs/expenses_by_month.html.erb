@@ -10,6 +10,7 @@
     <thead>
       <tr>
         <th>日付</th>
+        <th>曜日</th>
         <% ExpenseCategory.where(id: 2..16).each do |category| %>
           <th><%= category.name %></th>
         <% end %>
@@ -19,8 +20,18 @@
     <tbody>
       <% (1..31).each do |day| %>
         <% if Date.valid_date?(@year, @month, day) %>
+          <% current_date = Date.new(@year, @month, day) %>
           <tr>
-            <td align="center"><%= "#{day}" %>日</td>
+            <td align="center">
+              <%= link_to blog_path(current_date, params: { date: "#{current_date.year}-#{current_date.month}-#{current_date.day}" }) do %>
+                <%= "#{day}" %>日
+              <% end %>
+            </td>
+            <td align="center">
+              <% japanese_days = ["日", "月", "火", "水", "木", "金", "土"] %>
+              <%= japanese_days[Date.new(@year, @month, day).wday]%>
+              <!-- 日付に対応する曜日を表示 -->
+            </td>
             <% total_price = 0 %>
             <% ExpenseCategory.where(id: 2..16).each do |category| %>
               <td align="center">
