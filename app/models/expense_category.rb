@@ -11,7 +11,7 @@ class ExpenseCategory < ActiveHash::Base
     { id: 8, name: '医療費'},
     { id: 9, name: 'その他'},
     { id: 10, name: '家賃'},
-    { id: 11, name: '電気代'},
+    { id: 11, name: 'ローン'},
     { id: 12, name: 'ガス代'},
     { id: 13, name: '水道代'},
     { id: 14, name: '電気代'},

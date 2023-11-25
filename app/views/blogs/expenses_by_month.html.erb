@@ -11,13 +11,19 @@
       <tr>
         <th>日付</th>
         <th>曜日</th>
-        <% ExpenseCategory.where(id: 2..16).each do |category| %>
-          <th><%= category.name %></th>
+        <% ExpenseCategory.where(id: 2..9).each do |category| %>
+          <th class="variable_expense"><%= category.name %></th>
         <% end %>
-        <th>合計</th>
+        <!-- 固定費のカテゴリーを表示 -->
+        <% ExpenseCategory.where(id: 10..16).each do |category| %>
+          <th class="fixed_expense"><%= category.name %></th>
+        <% end %>
+        <th>金額</th>
+        <th>残額</th>
       </tr>
     </thead>
     <tbody>
+      <% previous_day_balance = @total_income_by_family %>
       <% (1..31).each do |day| %>
         <% if Date.valid_date?(@year, @month, day) %>
           <% current_date = Date.new(@year, @month, day) %>
@@ -46,6 +52,13 @@
               </td>
             <% end %>
             <td align="right"><%= total_price %>円</td>
+            <% total_expense = @expenses.where(date: "#{@year}-#{@month}-#{day}").sum(:price) %>
+            <% daily_balance = previous_day_balance - total_expense %>
+            <% previous_day_balance = daily_balance %>
+            <td align="right">
+              <%= daily_balance %>円
+            </td>
+            <% previous_day_balance = daily_balance %>
           </tr>
         <% end %>
       <% end %>
@@ -57,8 +70,12 @@
           <td align="center"><%= total_price %>円</td>
         <% end %>
         <td align="right">
-        <%= @expenses.sum(:price) %>円
-      </td>
+          <%= @expenses.sum(:price) %>円
+        </td>
+        <td align="right">
+          <% remaining_balance = @total_income_by_family - @expenses.sum(:price) %>
+          <%= remaining_balance %>円
+        </td>
       </tr>
     </tbody>
   </table>
