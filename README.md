@@ -36,6 +36,32 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 
 ## 実装した機能についての画像やGIFおよびその説明※
 
+ユーザー１のログイン画面
+[![Image from Gyazo](https://i.gyazo.com/e62083823fde2ac1c6f44afb151bb11c.png)](https://gyazo.com/e62083823fde2ac1c6f44afb151bb11c)
+
+ユーザー２のログイン画面
+[![Image from Gyazo](https://i.gyazo.com/d65ed879fa707e53230919adc69392d9.png)](https://gyazo.com/d65ed879fa707e53230919adc69392d9)
+
+日毎の詳細ページ（家族ごとのデータを合算して表示。登録したユーザーが自分のデータを編集、削除ができる）
+[![Image from Gyazo](https://i.gyazo.com/37c65ad7a494154b50c55d5520c89933.png)](https://gyazo.com/37c65ad7a494154b50c55d5520c89933)
+
+月毎の一覧ページ（日付に入ると上記の日毎詳細ページに遷移）
+[![Image from Gyazo](https://i.gyazo.com/2b5b6a99078bd621ada4ba842bd1bee5.png)](https://gyazo.com/2b5b6a99078bd621ada4ba842bd1bee5)
+
+収入の登録ページ
+[![Image from Gyazo](https://i.gyazo.com/d8fbc0c0b53eee5283a41b451e6d4b2a.png)](https://gyazo.com/d8fbc0c0b53eee5283a41b451e6d4b2a)
+
+支出の登録ページ
+[![Image from Gyazo](https://i.gyazo.com/c36098f82c10e00c6b35b8894ce851b4.png)](https://gyazo.com/c36098f82c10e00c6b35b8894ce851b4)
+
+新規ユーザー登録ページ①
+[![Image from Gyazo](https://i.gyazo.com/b1d5c5b4c91a4ca855d9bf893bba951a.gif)](https://gyazo.com/b1d5c5b4c91a4ca855d9bf893bba951a)
+
+新規ユーザー登録ページ②
+[![Image from Gyazo](https://i.gyazo.com/24a0a366993d8795f65cd52a011ea12a.gif)](https://gyazo.com/24a0a366993d8795f65cd52a011ea12a)
+
+ログイン画面
+https://gyazo.com/b14fb4075d765a610c5358cd3eb9be66
 
 ## 実装予定の機能
 ・マイページ<br>
