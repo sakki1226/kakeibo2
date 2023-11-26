@@ -15,3 +15,17 @@ ja:
           attributes:
             name:
               taken: "その家族名はすでに使用されています"
+  activerecord:
+    models:
+        expense: "支出情報"
+        income: "収入情報"
+    attributes:
+      expense:
+        date: 日時
+        price: 金額
+        expense_category_id: 支出の種類
+        payment_method_id: 支払方法
+      income:
+        date: 日時
+        price: 金額
+        income_category_id: 収入の種類        

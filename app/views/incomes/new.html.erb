@@ -3,7 +3,7 @@
   <h1>収入の登録</h1>
 
   <div class="income-form">
-
+  <%= render "devise/shared/error_messages", resource: @income %>
     <%= form_with(model: @income, local: true) do |f| %>
 
       <div class="form-group">

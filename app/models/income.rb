@@ -4,7 +4,7 @@ class Income < ApplicationRecord
 
   with_options presence: true do
     validates :date, :price, :user_id
-    validates :income_category_id, numericality: { other_than: 1, message: "can't be blank" } 
+    validates :income_category_id, numericality: { other_than: 1, message: "を入力してください" } 
   end
 
 end

@@ -3,37 +3,24 @@ h1{
 }
 
 .expense-main{
-  height: 1000px;
+  height: 1200px;
   padding: 70px 0;
 }
 
 .expense-form{
   background-color: #F2F2F3;
-  width: 600px;
-  height: 600px;
+  width: 850px;
+  height: 800px;
   border-radius: 5px solid;
   padding: 70px 60px;
   margin: 0 auto;  
+  text-align: center;
 }
 
 .form-tag{
   margin-bottom: 10px;
   width: 100px;
-  /* font-size: 20px;
-  font-weight: bold; */
 }
-
-/* .input-default {
-  width: 100%;
-  margin-top: 20px;
-  height: 40px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 16px;
-  resize: none;
-} */
 
 .buy-btn {
   width: 50%;

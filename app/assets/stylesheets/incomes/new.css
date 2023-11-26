@@ -9,11 +9,12 @@ h1{
 
 .income-form{
   background-color: #F2F2F3;
-  width: 600px;
-  height: 600px;
+  width: 850px;
+  height: 800px;
   border-radius: 5px solid;
   padding: 70px 60px;
   margin: 0 auto;  
+  text-align: center;
 }
 
 .form-tag{

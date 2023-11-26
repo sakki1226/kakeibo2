@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   before do
     user = FactoryBot.create(:user)
-    family = FactoryBot.create(:family)
-    @expense = FactoryBot.build(:expense, user_id: user.id, family_id: family.id)
+    @expense = FactoryBot.build(:expense, user_id: user.id)
   end
 
   describe '支出登録' do
@@ -17,8 +16,40 @@ RSpec.describe Expense, type: :model do
       it 'dateが空だと保存できないこと' do
         @expense.date = ''
         @expense.valid?
-        expect(@expense.errors.full_messages).to include("Dateを入力してください")
+        binding.pry
+        expect(@expense.errors.full_messages).to include("日時を入力してください")
       end
+      it 'expense_category_idが空だと保存できないこと' do
+        @expense.expense_category_id = ''
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("支出の種類を入力してください")
+      end
+      it 'expense_category_idは---が選択されている場合は保存できない' do
+        @expense.expense_category_id = '1'
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("支出の種類を入力してください")
+      end
+      it 'payment_method_idが空だと保存できないこと' do
+        @expense.payment_method_id = ''
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("支払方法を入力してください")
+      end
+      it 'payment_method_idは---が選択されている場合は保存できない' do
+        @expense.payment_method_id = ''
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("支払方法を入力してください")
+      end
+      it 'priceが空だと保存できないこと' do
+        @expense.price = ''
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("金額を入力してください")
+      end
+      it 'userが紐付いていないと保存できない' do
+        @expense.user = nil
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("Userを入力してください")
+      end
+
     end
   end
 end
