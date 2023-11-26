@@ -17,6 +17,7 @@ class ExpenseCategory < ActiveHash::Base
     { id: 14, name: '電気代'},
     { id: 15, name: '保険'},
     { id: 16, name: '携帯代'},
+    { id: 17, name: '貯金'},
     
   ]
 

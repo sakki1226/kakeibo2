@@ -9,6 +9,7 @@
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">収入の種類</label>
+          <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:income_category_id, IncomeCategory.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
       </div>
@@ -16,6 +17,7 @@
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">金額</label>
+          <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :price, class:"input-default", id:"postal-code" %>
       </div>
@@ -23,6 +25,7 @@
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">日時</label>
+          <span class="indispensable">必須</span>
         </div>
         <%= f.date_field :date, class: 'date-select' %>
       </div>

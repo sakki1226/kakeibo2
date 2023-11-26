@@ -1,5 +1,5 @@
 ## アプリケーション名
-「shearing kakeibo」
+「share money」
 
 ## アプリケーション概要
 家族（夫婦）間で各自の収支を登録し、家族全体の収支を管理できる
@@ -8,9 +8,12 @@
 https://kakeibo2.onrender.com/
 
 ## テスト用アカウント
-
+・Basic 認証パスワード：1006<br>
+・Basic 認証ID：admin<br>
+<山田家><br>
+ユーザー① メールアドレス→test@test  パスワード→111111<br>
+ユーザー② メールアドレス→test1@test  パスワード→222222<br>
 ## 利用方法
-
 
 ### ユーザー毎の収支投稿
 1.ユーザーの新規登録の際、家族名とユーザー２人を同時に登録する<br>
@@ -33,7 +36,11 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 
 ## 実装した機能についての画像やGIFおよびその説明※
 
+
 ## 実装予定の機能
+・マイページ<br>
+・毎月の支出を円グラフで表示<br>
+・支出を前月と比較できるように表示<br>
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/9899938f52ed9ae063e1c839dd9637a9.png)](https://gyazo.com/9899938f52ed9ae063e1c839dd9637a9)
@@ -52,8 +59,12 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 ## ローカルでの動作方法
 
 ## 工夫したポイント
+新規登録の際に2人分のユーザーを同時登録できるようにし、同じ家族名での登録ができないように実装したことで、セキュリティに配慮したユーザー登録を実現。<br>
+各ユーザーの登録したデータを合算し、家族全体での収支を一覧で見られるようにしたことで、普段家計を気にしていないユーザーに意識付けができるような構造を心掛けた。
 
 ## 改善点
+・JavaScript等を用いて、もっと動きのあるアプリケーションを今後実装していきたい。
 
 ## 制作時間
+120時間
 

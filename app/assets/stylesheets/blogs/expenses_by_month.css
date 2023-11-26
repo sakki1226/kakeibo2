@@ -27,10 +27,10 @@ tr:nth-child(even) {
 }
 
 .variable_expense {
-  background-color: #FFC0CB; /* 例：ピンク色 */
+  background-color: #FFC0CB; 
 }
 
 .fixed_expense {
-  background-color: #ADD8E6; /* 例：青色 */
+  background-color: #ADD8E6; 
 }
 
