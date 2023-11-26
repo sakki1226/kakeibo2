@@ -1,4 +1,8 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :move_to_index, only: [:edit]
+
+
   def index
   end
 
@@ -35,5 +39,12 @@ class ExpensesController < ApplicationController
 
   def expense_params
     params.require(:expense).permit(:date, :expense_category_id, :payment_method_id, :price).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    @expense = Expense.find(params[:id])
+    unless current_user.id == @expense.user.id
+      redirect_to root_path
+    end
   end
 end

@@ -20,8 +20,10 @@
             <td align="center"><%= IncomeCategory.find(income.income_category_id).name %></td>
             <td align="center"><%= income.price %> 円</td>
             <td align="center">
+            <% if current_user.id == income.user_id %>
               <%= link_to '編集', edit_income_path(income)  %>
               <%= link_to '削除', income_path(income), data: { turbo_method: :delete }  %>
+            <% end %>
               
             </td>            
           </tr>
@@ -50,8 +52,10 @@
           <td align="center"><%= PaymentMethod.find(expense.payment_method_id).name %></td>
           <td align="center"><%= expense.price %> 円</td>
           <td align="center">
+            <% if current_user.id == expense.user_id %>
             <%= link_to '編集', edit_expense_path(expense)  %>
             <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }  %>
+          <% end %>
           </td>          
         </tr>
       <% end %>

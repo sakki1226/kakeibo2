@@ -1,9 +1,9 @@
 <h2>新規登録</h2>
 <h3>(家族名と２人のユーザーを登録してください)</h3>
 <%= form_with model:@family_user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-
-
+  
   <div class='form-wrap'>
+  <%= render "devise/shared/error_messages", resource: @family_user %>
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">家族名</label>

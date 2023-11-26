@@ -1,0 +1,17 @@
+ja:
+  activemodel:
+    models:
+        family_user: "家族情報"
+    attributes:
+      family_user:
+        name: "家族名"
+        nickname: "ニックネーム"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワードの確認"
+    errors:
+      models:
+        family_user:
+          attributes:
+            name:
+              taken: "その家族名はすでに使用されています"

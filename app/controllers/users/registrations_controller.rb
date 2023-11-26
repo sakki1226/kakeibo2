@@ -9,29 +9,37 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def new
     @family_user = FamilyUser.new
-
   end
 
   def create
     @family_user = FamilyUser.new(family_params)
       unless @family_user.valid?
+
+        session[:family_user_errors] = @family_user.errors.full_messages
         render :new, status: :unprocessable_entity and return
       end
     session["family.regist_data"] = { family: family_params }
     render template: 'devise/registrations/new_user', status: :accepted
-    
   end
+
+  def new_user
+    family_user_params = session["family.regist_data"]["family"]
+    @family_user = FamilyUser.new(family_user_params[:family])  
+  end
+    
 
   def create_user
     family_user_params = session["family.regist_data"]["family"]
     family_user_params["user2"] = user2_params.to_h
     @family_user = FamilyUser.new(family_user_params)
 
+
     @user1 = User.new(session["family.regist_data"]["family"]["user1"])
     @user2 = User.new(user2_params)
     @family = Family.new(name: session["family.regist_data"]["family"]["name"])
 
-    unless @user1.valid? && @user2.valid?
+    unless @family_user.valid?
+      binding.pry
       render :new_user, status: :unprocessable_entity and return
     end
 
@@ -39,6 +47,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @user1.family = @user2.family = @family
 
       unless @user1.save && @user2.save
+        @family_user.errors.add(:base, "２人のユーザーを登録してください")
         render :new_user, status: :unprocessable_entity and return
       end
 
@@ -47,6 +56,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
       redirect_to root_path
     else
+      @family_user.errors.add(:base, "この家族名は既に存在しています")
       render :new_user, status: :unprocessable_entity and return
     end    
   end

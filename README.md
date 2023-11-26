@@ -1,24 +1,58 @@
-# README
+## アプリケーション名
+「shearing kakeibo」
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+家族（夫婦）間で各自の収支を登録し、家族全体の収支を管理できる
 
-Things you may want to cover:
+## URL
+https://kakeibo2.onrender.com/
 
-* Ruby version
+## テスト用アカウント
 
-* System dependencies
+## 利用方法
 
-* Configuration
 
-* Database creation
+### ユーザー毎の収支投稿
+1.ユーザーの新規登録の際、家族名とユーザー２人を同時に登録する<br>
+2.ログイン後、ヘッダーの収入ボタンから、収入の種類、金額、日付を入力し登録する<br>
+3.ログイン後、ヘッダーの支出ボタンから、支出の種類、金額、支払方法、日付を入力し登録する<br>
 
-* Database initialization
+### 家族で合算した日毎、月毎の一覧表を表示
+1.ログイン後カレンダーを表示できるようにし、カレンダーに日毎の合計金額を表示させる<br>
+2.カレンダーの日にちの数字を押すと、その日毎の収支の詳細を表示させることができる<br>
+3.カレンダー上部の月（例：2023年11月）の部分のリンクを押すと、月毎の支出の詳細を一覧で表示させる<br>
+4.月毎のページの日にちのリンクを押すと、日毎の詳細ページに遷移することができる
 
-* How to run the test suite
+## アプリケーションを作成した背景
+家計簿は女性が管理することが多いと感じ、<br>
+各自の収支を一つのアプリで関することで、<br>
+女性の負担を減らしながら家計の管理ができるアプリを作成したかったため。<br>
 
-* Services (job queues, cache servers, search engines, etc.)
+## 洗い出した要件
 
-* Deployment instructions
+## 実装した機能についての画像やGIFおよびその説明※
 
-* ...
+## 実装予定の機能
+
+## データベース設計
+[![Image from Gyazo](https://i.gyazo.com/9899938f52ed9ae063e1c839dd9637a9.png)](https://gyazo.com/9899938f52ed9ae063e1c839dd9637a9)
+
+## 画面遷移図
+https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT7zE/edit#gid=982722306
+
+## 開発環境
+・フロントエンド<br>
+・バッグエンド<br>
+・インフラ<br>
+・テスト<br>
+・テキストエディタ<br>
+
+
+## ローカルでの動作方法
+
+## 工夫したポイント
+
+## 改善点
+
+## 制作時間
+

@@ -4,6 +4,7 @@
 
   
   <div class='form-wrap'>
+  <%= render "devise/shared/error_messages", resource: @family_user %>
     <p> ユーザー2</p>
 
     <%= f.fields_for :user2 do |user2_fields| %>
