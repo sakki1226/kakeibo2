@@ -29,6 +29,7 @@ https://kakeibo2.onrender.com/
 女性の負担を減らしながら家計の管理ができるアプリを作成したかったため。<br>
 
 ## 洗い出した要件
+https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT7zE/edit#gid=982722306
 
 ## 実装した機能についての画像やGIFおよびその説明※
 
@@ -38,7 +39,7 @@ https://kakeibo2.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/9899938f52ed9ae063e1c839dd9637a9.png)](https://gyazo.com/9899938f52ed9ae063e1c839dd9637a9)
 
 ## 画面遷移図
-https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT7zE/edit#gid=982722306
+[![Image from Gyazo](https://i.gyazo.com/2485d65e3084ea9f9ba25ff3b3834b9a.png)](https://gyazo.com/2485d65e3084ea9f9ba25ff3b3834b9a)
 
 ## 開発環境
 ・フロントエンド<br>
