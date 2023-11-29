@@ -57,8 +57,8 @@ class BlogsController < ApplicationController
     @previous_month_total_expense = @previous_month_expenses.sum(:price)
 
     @category_expense_totals = {
-      "固定費" => @expenses.where(expense_category_id: 2..9).sum(:price),
-      "変動費" => @expenses.where(expense_category_id: 10..16).sum(:price),
+      "変動費" => @expenses.where(expense_category_id: 2..9).sum(:price),
+      "固定費" => @expenses.where(expense_category_id: 10..16).sum(:price),
       "貯金" => @expenses.where(expense_category_id: 17).sum(:price)
     }
   end
