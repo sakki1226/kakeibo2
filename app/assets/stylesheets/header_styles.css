@@ -1,36 +1,97 @@
-.header{
+.header {
   background-color: #aef4ed;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* 左右に要素を配置 */
   width: 100%;
-  padding: 0 100px 0 30px;  
+  padding: 0 100px;  
   height: 150px;
+  align-items: center;
 }
 
 .logo{
   font-size: 36px;
   font-weight: 600;
-  line-height: 150px;
-  padding-left: 80px;
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+
 }
 
 .header a{
   text-decoration: none;
   color: #000000;
+
 }
 
 .nav-lists{
   display: flex;
-  height: 100%;
-  align-items: center;
+  height: 80px;
   list-style: none;
 }
 
 .nav-lists__list{
-  margin-left: 70px;
   font-size: 22px;
-  font-weight: 600;
   line-height: 100px;
   list-style: none;
+}
+
+
+.btn-menu {
+  position: fixed; /* 要素の位置を固定 */
+  right: 2rem; /* 右からの距離を1remに設定 */
+  top: 2rem; /* 上からの距離を1remに設定 */
+  z-index: 4; /* 要素の重なり順を設定 */
+  padding: .5rem 1rem; /* 内側の余白を上下0.5rem、左右1remに設定 */
+  border: 1px solid var(--brown); /* 1px幅の線を太さ、色は変数(--brown)で設定 */
+  border-radius: 50%; /* 角丸を50%に設定（円形にする） */
+  height: 4rem; /* 要素の高さを4remに設定 */
+  width: 4rem; /* 要素の幅を4remに設定 */
+  transition: .4s; /* アニメーションの速さを0.4秒に設定 */
+}
+
+.btn-menu svg {
+  fill: var(--brown); /* SVG内の塗りを変数(--brown)で設定された色にする */
+  margin-top: .25rem; /* 上側のマージンを0.25remに設定 */
+  height: 2rem; /* SVGの高さを2remに設定 */
+  width: 2rem; /* SVGの幅を2remに設定 */
+}
+
+/* 閉じるボタン */
+#menu-close {
+  border: 1px solid var(--light-green);
+}
+#menu-close svg {
+  fill: var(--light-green);
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+  position: fixed; /* 要素の位置を固定 */
+  top: 0; /* 上端に配置 */
+  right: 0; /* 右端に配置 */
+  z-index: 4; /* 要素の重なり順を設定 */
+  padding: 8rem 2rem 2rem; /* 内側の余白を上部8rem、左右2rem、下部2remに設定 */
+  width: calc(50vw - 4rem); /* 画面幅の半分から4remを引いたサイズに設定 */
+  max-width: 20rem; /* 必要に応じて最大幅を設定 */
+  height: 100vh; /* 高さを画面の高さいっぱいに設定 */
+  background-color: var(--brown); /* 背景色を変数(--brown)で指定された色に設定 */
+  box-shadow: 0 0 2rem var(--brown); /* 影を付ける（横方向0、縦方向0、ぼかし2rem、色は変数(--brown)で指定された色） */
+  font-family: var(--oswald-font); /* フォントファミリーを変数(--oswald-font)で指定されたものに設定 */
+  translate: 100vw; /* ← この行はCSSのプロパティとしては存在しない可能性があります。恐らく、"transform"プロパティの誤記載かもしれません */
+  background-color: #f5f5f5
+}
+
+.menu-list {
+  list-style: none; /* リストのマーカーを削除 */
+}
+
+.menu-list li {
+  margin: 1.5rem 0; /* 上下に1.5remのマージンを設定 */
+  opacity: 0; /* 不透明度を0に設定（初期状態では非表示） */
+}
+
+.menu-list a {
+  color: var(--light-green); /* リンクの色を変数(--light-green)で指定された色に設定 */
+  text-decoration: none; /* 下線をなくす */
+  font-size: 2rem; /* フォントサイズを2remに設定 */
 }

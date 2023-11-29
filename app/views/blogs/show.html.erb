@@ -11,6 +11,7 @@
           <th>ユーザー</th>
           <th>種類</th>
           <th>金額</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -19,12 +20,12 @@
             <td align="center"><%= income.user.nickname %></td>
             <td align="center"><%= IncomeCategory.find(income.income_category_id).name %></td>
             <td align="center"><%= income.price %> 円</td>
-            <td align="center">
             <% if current_user.id == income.user_id %>
+              <td align="center">
               <%= link_to '編集', edit_income_path(income)  %>
               <%= link_to '削除', income_path(income), data: { turbo_method: :delete }  %>
-            <% end %>
-              
+              </td>
+            <% end %>              
             </td>            
           </tr>
         <% end %>
@@ -42,6 +43,7 @@
         <th>種類</th>
         <th>支払方法</th>
         <th>金額</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -51,10 +53,11 @@
           <td align="center"><%= ExpenseCategory.find(expense.expense_category_id).name %></td>
           <td align="center"><%= PaymentMethod.find(expense.payment_method_id).name %></td>
           <td align="center"><%= expense.price %> 円</td>
-          <td align="center">
-            <% if current_user.id == expense.user_id %>
+          <% if current_user.id == expense.user_id %>
+            <td align="center">
             <%= link_to '編集', edit_expense_path(expense)  %>
             <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }  %>
+            </td>
           <% end %>
           </td>          
         </tr>
