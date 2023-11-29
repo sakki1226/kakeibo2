@@ -47,6 +47,15 @@ class BlogsController < ApplicationController
       @total_income_by_family += incomes.sum(:price)
       @total_expense_by_family += expenses.sum(:price)
     end
+    previous_month = Date.new(@year, @month, 1) - 1.month
+    @previous_month_expenses = Expense.where(date: previous_month.beginning_of_month..previous_month.end_of_month)
+    @previous_month_category_totals = {}
+    ExpenseCategory.where(id: 2..17).each do |category|
+      total_price = @previous_month_expenses.where(expense_category_id: category.id).sum(:price)
+      @previous_month_category_totals[category.id] = total_price
+    end
+    @previous_month_total_expense = @previous_month_expenses.sum(:price)
+
   end
 
   private

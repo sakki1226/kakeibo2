@@ -37,10 +37,10 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 ## 実装した機能についての画像やGIFおよびその説明※
 
 ユーザー１のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/e62083823fde2ac1c6f44afb151bb11c.png)](https://gyazo.com/e62083823fde2ac1c6f44afb151bb11c)
+[![Image from Gyazo](https://i.gyazo.com/ed54b54d2ea411aaf49744557e75801f.gif)](https://gyazo.com/ed54b54d2ea411aaf49744557e75801f)
 
 ユーザー２のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/d65ed879fa707e53230919adc69392d9.png)](https://gyazo.com/d65ed879fa707e53230919adc69392d9)
+[![Image from Gyazo](https://i.gyazo.com/49a2b88d22196d870fbc9a1ef09502c4.gif)](https://gyazo.com/49a2b88d22196d870fbc9a1ef09502c4)
 
 日毎の詳細ページ（家族ごとのデータを合算して表示。登録したユーザーが自分のデータを編集、削除ができる）
 [![Image from Gyazo](https://i.gyazo.com/37c65ad7a494154b50c55d5520c89933.png)](https://gyazo.com/37c65ad7a494154b50c55d5520c89933)
@@ -61,7 +61,7 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 [![Image from Gyazo](https://i.gyazo.com/24a0a366993d8795f65cd52a011ea12a.gif)](https://gyazo.com/24a0a366993d8795f65cd52a011ea12a)
 
 ログイン画面
-https://gyazo.com/b14fb4075d765a610c5358cd3eb9be66
+[![Image from Gyazo](https://i.gyazo.com/738731f4138fdbbe22a687e0b471b7c9.png)](https://gyazo.com/738731f4138fdbbe22a687e0b471b7c9)
 
 ## 実装予定の機能
 ・マイページ<br>

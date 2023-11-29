@@ -34,3 +34,9 @@ tr:nth-child(even) {
   background-color: #ADD8E6; 
 }
 
+.highlight-row {
+  background-color: #daf1ba;
+}
+
+
+
