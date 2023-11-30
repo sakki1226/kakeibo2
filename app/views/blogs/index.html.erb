@@ -1,8 +1,6 @@
 <div class="toppage">
   <h1 class="top"><%= current_user.family.name %>さん家の家計簿</h1>
-  <br>
 
-  <br>
   <div class="col-md-8">
     <%= month_calendar events: @blogs do |date, blogs| %>
       <%= link_to blog_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }) do %>

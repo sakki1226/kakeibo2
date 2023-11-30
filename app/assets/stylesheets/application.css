@@ -33,24 +33,10 @@
     background: #ffeaea;
   }
   .wday-6 {
-    background: #ffeaea;
+    background: #cbf5f1;
   }
-  .today {
-    background: #FFA0A0;
-  }
-}
-
-.calendar-table tr td:hover {
-  background-color: #FFFF8c;    
 }
 
 .simple-calendar th {
   text-align: center;
-}
-
-.prev-month a {
-  display: none;
-}
-.next-month a {
-  display: none;
 }

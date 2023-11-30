@@ -3,7 +3,6 @@
 <div class= "income_expense_manthly_total">
   <p>収入合計: <%= @total_income_by_family %> 円</p>
   <p>支出合計: <%= @total_expense_by_family %> 円</p>
-  
 </div>
 
 <div class="month_list">
@@ -102,7 +101,7 @@
     <p><%= @expenses.sum(:price) %>円</p>
   </div>
   <div class= "bar_chart">
-    <p>変動費の棒グラフ</p>
+    <p>各支出の前月比</p>
     <%= column_chart [
       { name: '現在', data: @current_month_variable_expense_data },
       { name: '前月', data: @previous_month_variable_expense_data }

@@ -1,9 +1,20 @@
-.top{
+.toppage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
   text-align: center;
 }
 
-.total_price{
+.col-md-8 {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto; /* 左右のマージンを自動で設定して中央に寄せる */
+}
+
+.total_price {
   text-align: center;
   font-size: 15px;
-
 }

@@ -1,5 +1,5 @@
 .header {
-  background-color: #aef4ed;
+  /* background-color: #aef4ed; */
   display: flex;
   justify-content: space-between; /* 左右に要素を配置 */
   width: 100%;
@@ -8,9 +8,15 @@
   align-items: center;
 }
 
+.heading,
+.navbar {
+  flex: 1; /* 空きスペースを均等に拡張 */
+}
+
 .logo{
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 600;
+  text-align: center; /* ロゴを中央揃え */
   font-family: 'Allura', cursive;
   font-family: 'Lobster', sans-serif;
   font-family: 'Parisienne', cursive;
@@ -38,8 +44,8 @@
 
 .btn-menu {
   position: fixed; /* 要素の位置を固定 */
-  right: 2rem; /* 右からの距離を1remに設定 */
-  top: 2rem; /* 上からの距離を1remに設定 */
+  right: 4rem; /* 右からの距離を1remに設定 */
+  top: 3rem; /* 上からの距離を1remに設定 */
   z-index: 4; /* 要素の重なり順を設定 */
   padding: .5rem 1rem; /* 内側の余白を上下0.5rem、左右1remに設定 */
   border: 1px solid var(--brown); /* 1px幅の線を太さ、色は変数(--brown)で設定 */

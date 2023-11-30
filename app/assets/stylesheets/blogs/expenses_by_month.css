@@ -43,7 +43,16 @@ tr:nth-child(even) {
 }
 
 .chart{
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
+}
+
+.pie-chart{
+  width: 30%;
+}
+
+.bar_chart{
+  width: 70%;
 }
 

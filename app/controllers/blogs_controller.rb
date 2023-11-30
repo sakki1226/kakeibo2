@@ -63,11 +63,11 @@ class BlogsController < ApplicationController
     }
 
     current_month_variable_expense_data = {}
-  (2..9).each do |category_id|
-    category_name = ExpenseCategory.find(category_id).name
-    expenses_for_category = @expenses.where(expense_category_id: category_id)
-    current_month_variable_expense_data[category_name] = expenses_for_category.sum(:price)
-  end
+    (2..16).each do |category_id|
+      category_name = ExpenseCategory.find(category_id).name
+      expenses_for_category = @expenses.where(expense_category_id: category_id)
+      current_month_variable_expense_data[category_name] = expenses_for_category.sum(:price)
+    end
 
   # 現在の月の変動費データをインスタンス変数に格納
   @current_month_variable_expense_data = current_month_variable_expense_data
@@ -77,7 +77,7 @@ class BlogsController < ApplicationController
 
   # 前月の変動費データを取得
   previous_month_variable_expense_data = {}
-  (2..9).each do |category_id|
+  (2..16).each do |category_id|
     category_name = ExpenseCategory.find(category_id).name
     previous_month_expenses_for_category = Expense.where(expense_category_id: category_id, date: previous_month.beginning_of_month..previous_month.end_of_month)
     previous_month_variable_expense_data[category_name] = previous_month_expenses_for_category.sum(:price)

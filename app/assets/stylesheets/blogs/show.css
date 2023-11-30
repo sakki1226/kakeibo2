@@ -1,8 +1,23 @@
+.dairy-main{
+  height: 1200px;
+  padding: 70px 0;
+}
+
 .date{
   text-align: center;
   font-size: 30px;
   font-weight: 600;
   margin: 20px 0 ;
+}
+
+.dairy-table{
+  background-color: #F2F2F3;
+  width: 850px;
+  height: 700px;
+  border-radius: 5px solid;
+  padding: 70px 60px;
+  margin: 0 auto;  
+  text-align: center;
 }
 
 .income-header {
