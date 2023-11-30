@@ -95,5 +95,17 @@
   </table>
 </div>
 
-<p>支出の円グラフ</p>
-<%= pie_chart @category_expense_totals, colors: ["#FFC0CB", "#ADD8E6", "lightyellow"] %>
+<div class= "chart">
+  <div class= "pie-chart">
+    <p>支出の円グラフ</p>
+    <%= pie_chart @category_expense_totals, colors: ["#FFC0CB", "#ADD8E6", "lightyellow"] %>
+    <p><%= @expenses.sum(:price) %>円</p>
+  </div>
+  <div class= "bar_chart">
+    <p>変動費の棒グラフ</p>
+    <%= column_chart [
+      { name: '現在', data: @current_month_variable_expense_data },
+      { name: '前月', data: @previous_month_variable_expense_data }
+    ] %>
+  </div>
+</div>

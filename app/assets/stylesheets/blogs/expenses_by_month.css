@@ -42,5 +42,8 @@ tr:nth-child(even) {
   background-color: #daf1ba;
 }
 
-
+.chart{
+  display: flex;
+  justify-content: space-around;
+}
 
