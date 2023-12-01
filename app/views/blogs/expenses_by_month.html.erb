@@ -9,7 +9,7 @@
   <table  border="1" align="center">
     <thead>
       <tr>
-        <th width="120">日付</th>
+        <th width="80">日付</th>
         <th width="80">曜日</th>
         <% ExpenseCategory.where(id: 2..9).each do |category| %>
           <th width="80", class="variable_expense"><%= category.name %></th>

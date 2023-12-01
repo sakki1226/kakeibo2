@@ -9,7 +9,7 @@
 
 .heading,
 .navbar {
-  flex: 1; /* 空きスペースを均等に拡張 */
+  flex: 1; 
 }
 
 .logo{
