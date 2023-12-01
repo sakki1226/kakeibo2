@@ -90,6 +90,16 @@ ul {
   cursor: pointer;
 }
 
+.login-red-btn a:hover, .register-blue-btn a:hover{
+  olor: #fff;
+    background: #e38787;
+    box-shadow: 0 0 0 5px #e38787;
+    border: 2px dashed #eda1a1;
+}
+
+
+
+
 .session_form_wrap{
   width: 50%;
   background-color: #f5f5f5;

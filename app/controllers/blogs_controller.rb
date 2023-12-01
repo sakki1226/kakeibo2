@@ -39,7 +39,6 @@ class BlogsController < ApplicationController
 
     @expenses = Expense.where(user_id: family_users.pluck(:id)).where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1))
 
-    # 各家族の収入と支出を計算
     family_users.each do |user|
       incomes = user.incomes.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1))
       expenses = user.expenses.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1))
@@ -69,22 +68,18 @@ class BlogsController < ApplicationController
       current_month_variable_expense_data[category_name] = expenses_for_category.sum(:price)
     end
 
-  # 現在の月の変動費データをインスタンス変数に格納
-  @current_month_variable_expense_data = current_month_variable_expense_data
+    @current_month_variable_expense_data = current_month_variable_expense_data
 
-  # 前月の年月を取得
-  previous_month = Date.new(@year, @month, 1) - 1.month
+    previous_month = Date.new(@year, @month, 1) - 1.month
 
-  # 前月の変動費データを取得
-  previous_month_variable_expense_data = {}
-  (2..16).each do |category_id|
-    category_name = ExpenseCategory.find(category_id).name
-    previous_month_expenses_for_category = Expense.where(expense_category_id: category_id, date: previous_month.beginning_of_month..previous_month.end_of_month)
-    previous_month_variable_expense_data[category_name] = previous_month_expenses_for_category.sum(:price)
-  end
+    previous_month_variable_expense_data = {}
+    (2..16).each do |category_id|
+      category_name = ExpenseCategory.find(category_id).name
+      previous_month_expenses_for_category = Expense.where(expense_category_id: category_id, date: previous_month.beginning_of_month..previous_month.end_of_month)
+      previous_month_variable_expense_data[category_name] = previous_month_expenses_for_category.sum(:price)
+    end
 
-  # 前月の変動費データをインスタンス変数に格納
-  @previous_month_variable_expense_data = previous_month_variable_expense_data
+    @previous_month_variable_expense_data = previous_month_variable_expense_data
   end
 
   private
