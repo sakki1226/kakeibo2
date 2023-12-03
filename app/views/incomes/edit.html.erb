@@ -1,3 +1,4 @@
+<div class="background-image">
 <div class ="income-main">
 
 <h1>収入の編集</h1>
@@ -27,9 +28,11 @@
         <%= f.date_field :date, class: 'date-select' %>
       </div>
 
-      <div class='buy-btn'>
-        <%= f.submit "登録" ,class:"buy-blue-btn", id:"button" %>
-      </div>
+      <div class="button-container">
+        <button class="btn">
+        <span class="text">登録</span>
+        <span class="icon"></span>
+      </button>
     <% end %>
   </div>
 </div>
