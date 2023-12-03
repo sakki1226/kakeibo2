@@ -17,15 +17,13 @@
     <script src="js/menu.js" defer></script>
   </head>
 
-  <body>
+  <body class="body-bg">
      <header class="header">
       <div class="heading">
         <h1 class="logo"><a href="/">Share money</a></h1>
       </div>
       <div class="navbar">
         <ul class="nav-lists">
-          
-  
           <nav>
             <button id="menu-open" class="btn-menu">
               <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +55,29 @@
       </div>
     </header>
     <%= yield %>
-    <footer>
+    <footer class="footer01">
+      <div class="footer-container">
+        <nav class="nav">
+          <ul class="item">
+            <li class="list">
+              <a href="">ABOUT</a>
+            </li>
+            <li class="list">
+              <a href="">SERVICE</a>
+            </li>
+            <li class="list">
+              <a href="">PLANS</a>
+            </li>
+            <li class="list">
+              <a href="">INFOMATION</a>
+            </li>
+            <li class="list">
+              <a href="">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright"><small>© 2023 Sample</small></p>
     </footer>
   </body>
 </html>

@@ -15,16 +15,20 @@ p{
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
+
+/* フォーム部分 */
 
 .form-wrap {
   width: 50%;
   background-color: #f5f5f5;
   padding: 40px 0 0 0;
   margin-top: 20px;
-  height: 1000px;
-  text-align: center;
+  height: auto;
 }
+
+
 
 ul {
   list-style: none;
@@ -42,6 +46,14 @@ ul {
   font-weight: bold;
 }
 
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -54,7 +66,6 @@ ul {
 
 .input-default {
   width: 100%;
-  margin-top: 20px;
   height: 40px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -62,30 +73,34 @@ ul {
   background: #fff;
   font-size: 16px;
   resize: none;
+  margin-bottom: 20px;
 }
 
-.form-group {
-  width: 50%;
+
+
+.button-container {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 20px;
+  justify-content: center;
+  margin-top: 20px; /* 必要に応じて適切な余白を追加 */
 }
 
 .btn {
-  display: inline-block;
-  border: none;
+  display: block; 
+  margin: 0 auto; 
+  margin-top: 40px; 
+  margin-bottom: 60px; 
   width: 140px;
   height: 50px;
   background-color: #6FD2E1;
   border-radius: 6px;
+  border: none;
   font-size: 24px;
   color: #fff;
   font-weight: bold;
   position: relative;
   transition: .2s;
-  margin-top: 20px;
 }
+
 .btn .text {
   display: block;
   transition: .28s;
@@ -119,36 +134,4 @@ opacity: 1;
 transition-delay: .3s;
 }
 
-.login-btn {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
 
-.login-red-btn, .register-blue-btn {
-  width: 100%;
-  background: #aef4ed;;
-  border: 1px solid #aef4ed;
-  border-radius: 4px;
-  color: black;
-  font-weight: 600;
-  line-height: 48px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.login-red-btn a:hover, .register-blue-btn a:hover{
-  color: #fff;
-    background: #e38787;
-    box-shadow: 0 0 0 5px #e38787;
-    border: 2px dashed #eda1a1;
-}
-
-.session_form_wrap{
-  width: 50%;
-  background-color: #f5f5f5;
-  padding: 80px 0 0 0;
-  margin-top: 20px;
-  height: 500px;
-  text-align: center; 
-}

@@ -12,6 +12,7 @@
   width: 80%;
   text-align: center;
   margin: 0 auto; /* 左右のマージンを自動で設定して中央に寄せる */
+  margin-bottom: 30px;
 }
 
 .total_price {

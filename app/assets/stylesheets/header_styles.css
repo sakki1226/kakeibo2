@@ -1,10 +1,10 @@
 .header {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   padding: 0 100px;  
   height: 150px;
   align-items: center;
+  background-color: black;
 }
 
 .heading,
@@ -23,7 +23,7 @@
 
 .header a{
   text-decoration: none;
-  color: #000000;
+  color: white;
 
 }
 
@@ -98,4 +98,64 @@
   color: var(--light-green); /* リンクの色を変数(--light-green)で指定された色に設定 */
   text-decoration: none; /* 下線をなくす */
   font-size: 2rem; /* フォントサイズを2remに設定 */
+}
+
+footer.footer01 {
+  padding-top: 10px;
+  margin: 0;
+  background: black;
+  height: 100px;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+
+
+nav.nav ul.item {
+  display: flex;
+  justify-content: center;
+}
+
+nav.nav ul.item li.list {
+  padding-left: 1.5rem;
+}
+
+nav.nav ul.item li.list a {
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+p.copyright {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  footer.footer01 {
+    padding: 2rem 1rem 1rem;
+  }
+
+ .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 414px;
+    margin-bottom: 2rem;
+  }
+
+  div.logo {
+    margin-bottom: 1.5rem;
+  }
+
+  nav.nav ul.item {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+ nav.nav ul.item li.list {
+    padding: 0.5rem;
+  }
 }
