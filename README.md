@@ -37,36 +37,35 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 ## 実装した機能についての画像やGIFおよびその説明※
 
 ユーザー１のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/ed54b54d2ea411aaf49744557e75801f.gif)](https://gyazo.com/ed54b54d2ea411aaf49744557e75801f)
+[![Image from Gyazo](https://i.gyazo.com/1d0626073cfd62920f4a535c72dd719e.gif)](https://gyazo.com/1d0626073cfd62920f4a535c72dd719e)
 
 ユーザー２のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/49a2b88d22196d870fbc9a1ef09502c4.gif)](https://gyazo.com/49a2b88d22196d870fbc9a1ef09502c4)
+[![Image from Gyazo](https://i.gyazo.com/b9fe254971f3c26ddd9eccaf885468ca.gif)](https://gyazo.com/b9fe254971f3c26ddd9eccaf885468ca)
 
 日毎の詳細ページ（家族ごとのデータを合算して表示。登録したユーザーが自分のデータを編集、削除ができる）
-[![Image from Gyazo](https://i.gyazo.com/37c65ad7a494154b50c55d5520c89933.png)](https://gyazo.com/37c65ad7a494154b50c55d5520c89933)
+[![Image from Gyazo](https://i.gyazo.com/7593de10faf4f9ac37a80711318c674c.jpg)](https://gyazo.com/7593de10faf4f9ac37a80711318c674c)
 
-月毎の一覧ページ（日付に入ると上記の日毎詳細ページに遷移）
-[![Image from Gyazo](https://i.gyazo.com/2b5b6a99078bd621ada4ba842bd1bee5.png)](https://gyazo.com/2b5b6a99078bd621ada4ba842bd1bee5)
+月毎の一覧・支出の円グラフ・前月比の棒グラフを表示したページ（日付に入ると上記の日毎詳細ページに遷移）
+[![Image from Gyazo](https://i.gyazo.com/73d8cf8520aba08c4cc14cc36f04bac9.gif)](https://gyazo.com/73d8cf8520aba08c4cc14cc36f04bac9)
 
 収入の登録ページ
-[![Image from Gyazo](https://i.gyazo.com/d8fbc0c0b53eee5283a41b451e6d4b2a.png)](https://gyazo.com/d8fbc0c0b53eee5283a41b451e6d4b2a)
+[![Image from Gyazo](https://i.gyazo.com/ab4991c15df03c9efc8994396a54c678.gif)](https://gyazo.com/ab4991c15df03c9efc8994396a54c678)
 
 支出の登録ページ
-[![Image from Gyazo](https://i.gyazo.com/c36098f82c10e00c6b35b8894ce851b4.png)](https://gyazo.com/c36098f82c10e00c6b35b8894ce851b4)
+[![Image from Gyazo](https://i.gyazo.com/decc00ea8b14cd41e138d052b4ab3dda.gif)](https://gyazo.com/decc00ea8b14cd41e138d052b4ab3dda)
 
 新規ユーザー登録ページ①
-[![Image from Gyazo](https://i.gyazo.com/b1d5c5b4c91a4ca855d9bf893bba951a.gif)](https://gyazo.com/b1d5c5b4c91a4ca855d9bf893bba951a)
+[![Image from Gyazo](https://i.gyazo.com/4808847df40ac6630eec592b68c6798b.gif)](https://gyazo.com/4808847df40ac6630eec592b68c6798b)
 
 新規ユーザー登録ページ②
-[![Image from Gyazo](https://i.gyazo.com/24a0a366993d8795f65cd52a011ea12a.gif)](https://gyazo.com/24a0a366993d8795f65cd52a011ea12a)
+[![Image from Gyazo](https://i.gyazo.com/04e5b0e6970541582a1136014b51192c.gif)](https://gyazo.com/04e5b0e6970541582a1136014b51192c)
 
 ログイン画面
-[![Image from Gyazo](https://i.gyazo.com/738731f4138fdbbe22a687e0b471b7c9.png)](https://gyazo.com/738731f4138fdbbe22a687e0b471b7c9)
+[![Image from Gyazo](https://i.gyazo.com/e73719aff4dbc8dbb8e50c2da55eb475.gif)](https://gyazo.com/e73719aff4dbc8dbb8e50c2da55eb475)
 
 ## 実装予定の機能
 ・マイページ<br>
-・毎月の支出を円グラフで表示<br>
-・支出を前月と比較できるように表示<br>
+
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/9899938f52ed9ae063e1c839dd9637a9.png)](https://gyazo.com/9899938f52ed9ae063e1c839dd9637a9)
