@@ -20,13 +20,29 @@ p{
 
 /* フォーム部分 */
 
-.form-wrap {
+.session-form-wrap{
+  width: 50%;
+  background-color: #f5f5f5;
+  padding: 40px 0 0 0;
+  margin-top: 20px;
+  height: 450px;
+}
+
+.registration-form-wrap{
+  width: 50%;
+  background-color: #f5f5f5;
+  padding: 40px 0 0 0;
+  margin-top: 20px;
+  height: 800px;
+}
+
+/* .form-wrap {
   width: 50%;
   background-color: #f5f5f5;
   padding: 40px 0 0 0;
   margin-top: 20px;
   height: auto;
-}
+} */
 
 ul {
   list-style: none;
