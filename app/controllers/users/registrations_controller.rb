@@ -14,7 +14,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     @family_user = FamilyUser.new(family_params)
       unless @family_user.valid?
-
         session[:family_user_errors] = @family_user.errors.full_messages
         render :new, status: :unprocessable_entity and return
       end
