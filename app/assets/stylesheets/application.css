@@ -25,18 +25,88 @@
   margin-bottom: 40px;
 }
 
+.calendar-heading a {
+  text-decoration: none;
+  font-size: 28px; 
+  font-weight: bold; 
+  color: #2c3e50; /* リンクのデフォルトの色 */
+}
+
+.calendar-heading a:hover {
+  color: #3498db; /* マウスを重ねた時の色 */
+  text-decoration: underline; /* 下線を表示 */
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 右寄せにする */
+}
+
+.calendar-date {
+  position: relative;
+  width: fit-content;
+}
+
+.date-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .simple-calendar {
   .day {
     background: #faf8f5;
   }
   .wday-0 {
-    background: #cbf5f1;
+    background: #6FD2E1;
   }
   .wday-6 {
-    background: #cbf5f1;
+    background: #6FD2E1;
   }
+}
+
+
+.simple-calendar .wday-0 .date-number {
+  color: red; 
+}
+
+.simple-calendar .wday-6 .date-number {
+  color: blue; 
 }
 
 .simple-calendar th {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498db; 
+  text-decoration: underline; 
+}
+
+.date-number {
+  font-size: 16px; 
+  font-weight: bold; 
+  color: #2c3e50; 
+  position: relative;
+  display: inline-block;
+  
+}
+
+.date-link {
+  text-decoration: none; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.date-link:hover .date-number {
+  color: #3498db; 
 }

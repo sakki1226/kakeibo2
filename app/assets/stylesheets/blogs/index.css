@@ -11,11 +11,15 @@
 .col-md-8 {
   width: 80%;
   text-align: center;
-  margin: 0 auto; /* 左右のマージンを自動で設定して中央に寄せる */
+  margin: 0 auto; 
   margin-bottom: 30px;
 }
 
 .total_price {
   text-align: center;
   font-size: 15px;
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }

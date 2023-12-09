@@ -11,13 +11,19 @@
 }
 
 .dairy-table{
-  background-color: #F2F2F3;
+  /* background-color: #F2F2F3; */
   width: 850px;
   height: 700px;
   border-radius: 5px solid;
   padding: 70px 60px;
   margin: 0 auto;  
   text-align: center;
+}
+
+.income-list{
+  max-width: 650px;
+  margin: 0 auto;
+
 }
 
 .income-header {
@@ -27,7 +33,65 @@
   margin-bottom: 20px;
 }
 
+.income-list th
+.income-list td{
+  padding: 1rem;
+  border-right: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.income-list:last-child,
+.income-list:last-child {
+  border-right: 0;
+}
+
+.income-list thead tr{
+  background-color: #6FD2E1;
+  color: #fff;
+  height: 40px;
+}
+
+.income-list thead th {
+  text-align: center;
+}
+
+.income-list tbody tr {
+  border-bottom: 1px solid #fff;
+  background-color: #f1f3f8;
+  height: 40px;
+}
+
+.income-list tbody tr:last-child {
+  border: none;
+}
+
+.income-list tbody th {
+  width: 25%;
+}
+
+
 
 .expense-header {
   text-align: center;
+}
+
+
+.edit_btn, .delete_btn {
+  font-size: 16px; 
+  font-weight: bold; 
+  color: #2c3e50; 
+  position: relative;
+  display: inline-block;
+  
+}
+
+.date-link {
+  text-decoration: none; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.date-link:hover .date-number {
+  color: #3498db; 
 }

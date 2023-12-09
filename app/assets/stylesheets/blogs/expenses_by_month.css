@@ -2,11 +2,19 @@
   text-align: center;
   font-size: 20px;
   font-weight: 600;
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .month_list {
   margin: 0 auto;
   width: 90%;
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 table {
@@ -39,14 +47,15 @@ tr:nth-child(even) {
   background-color: lightyellow ;
 }
 
-.highlight-row {
-  background-color: #daf1ba;
-}
 
 .chart{
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .pie-chart{

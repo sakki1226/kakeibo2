@@ -1,11 +1,11 @@
 <div class="index-background-image">
 <div class="toppage">
-  <h1 class="top"><%= current_user.family.name %>家</h1>
+  <h1 class="top"></h1>
 
   <div class="col-md-8">
     <%= month_calendar events: @blogs do |date, blogs| %>
-      <%= link_to blog_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }) do %>
-        <%= date.day %>
+      <%= link_to blog_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }), class: 'date-link' do %>
+        <%= content_tag(:span, date.day, class: 'date-number') %>
       <% end %>
       <br>
       <br>

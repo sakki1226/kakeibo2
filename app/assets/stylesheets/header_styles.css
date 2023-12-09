@@ -4,7 +4,7 @@
   padding: 0 100px;  
   height: 150px;
   align-items: center;
-  background-color: black;
+  background-color: #6FD2E1;
 }
 
 .heading,
@@ -23,7 +23,7 @@
 
 .header a{
   text-decoration: none;
-  color: white;
+  color: black;
 
 }
 
@@ -82,7 +82,7 @@
   box-shadow: 0 0 2rem var(--brown); /* 影を付ける（横方向0、縦方向0、ぼかし2rem、色は変数(--brown)で指定された色） */
   font-family: var(--oswald-font); /* フォントファミリーを変数(--oswald-font)で指定されたものに設定 */
   translate: 100vw; /* ← この行はCSSのプロパティとしては存在しない可能性があります。恐らく、"transform"プロパティの誤記載かもしれません */
-  background-color: #f5f5f5
+  background-color: black
 }
 
 .menu-list {
@@ -95,16 +95,17 @@
 }
 
 .menu-list a {
-  color: var(--light-green); /* リンクの色を変数(--light-green)で指定された色に設定 */
   text-decoration: none; /* 下線をなくす */
   font-size: 2rem; /* フォントサイズを2remに設定 */
+  color: white;
 }
 
 footer.footer01 {
   padding-top: 10px;
   margin: 0;
-  background: black;
+  background: #6FD2E1;
   height: 100px;
+  padding-top: 20px;
 }
 
 .footer-container {
@@ -124,14 +125,14 @@ nav.nav ul.item li.list {
 
 nav.nav ul.item li.list a {
   font-weight: bold;
-  color: #fff;
+  color: black;
   font-size: 0.8rem;
 }
 
 p.copyright {
   text-align: center;
-  color: #fff;
-  background-color: black;
+  color: black;
+  background-color: #6FD2E1;
 }
 
 @media screen and (max-width: 768px) {

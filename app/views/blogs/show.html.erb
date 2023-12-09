@@ -9,14 +9,14 @@
 
     <div class="income-table">
       <div class="income-header">収入</div>
-      <div class="list">
-        <table  border="1" align="center">
+      <table class="income-list">
+        <%# <table  border="1" align="center"> %>
           <thead>
             <tr>
-              <th width="150">ユーザー</th>
-              <th width="150">種類</th>
-              <th width="150">金額</th>
-              <th width="150"></th>
+              <th width="250">ユーザー</th>
+              <th width="250">種類</th>
+              <th width="250">金額</th>
+              <th width="250"></th>
             </tr>
           </thead>
           <tbody>
@@ -27,28 +27,30 @@
                 <td align="center"><%= income.price %> 円</td>
                 <% if current_user.id == income.user_id %>
                   <td align="center">
-                  <%= link_to '編集', edit_income_path(income)  %>
-                  <%= link_to '削除', income_path(income), data: { turbo_method: :delete }  %>
+                  <%= link_to '編集', edit_income_path(income), class:"edit_btn"  %>
+                  <%= link_to '削除', income_path(income), data: { turbo_method: :delete }, class:"delete_btn"  %>
                   </td>
-                <% end %>              
-                </td>            
+                <% else %>
+                  <td></td>
+                <% end %>                         
               </tr>
             <% end %>
           </tbody>
         </table>
-      </div>
+      </table>
     </div>
 
     <div class="expense-table">
       <h2 class="expense-header">支出</h2>
-      <table  border="1" align="center">
+      <table class="income-list">
+      <%# <table  border="1" align="center"> %>
         <thead>
           <tr>
-            <th width="120">ユーザー</th>
-            <th width="120">種類</th>
-            <th width="120">支払方法</th>
-            <th width="120">金額</th>
-            <th width="120"></th>
+            <th width="200">ユーザー</th>
+            <th width="200">種類</th>
+            <th width="200">支払方法</th>
+            <th width="200">金額</th>
+            <th width="200"></th>
           </tr>
         </thead>
         <tbody>
@@ -60,11 +62,13 @@
               <td align="center"><%= expense.price %> 円</td>
               <% if current_user.id == expense.user_id %>
                 <td align="center">
-                <%= link_to '編集', edit_expense_path(expense)  %>
-                <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }  %>
+                <%= link_to '編集', edit_expense_path(expense), class:"edit_btn" %>
+                <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }, class:"delete_btn"  %>
                 </td>
+              <% else %>
+                <td></td>
               <% end %>
-              </td>          
+         
             </tr>
           <% end %>
         </tbody>
