@@ -1,6 +1,29 @@
 <div class="toppage">
   <h1 class="top"></h1>
 
+  <div class="sub_bar">
+    <div class="timeline01">
+      <div class="list">
+        <h2 class="title">トップページ</h2>
+        <p class="content">
+          家族の支出合計金額をカレンダーに表示しています<br />日付をクリックすると日ごとの収支が見れます
+        </p>
+      </div>
+      <div class="list">
+        <h2 class="title">収入・支出の登録</h2>
+        <p class="content">
+          その日の収入・支出が発生したらすぐに登録しましょう。
+        </p>
+      </div>
+      <div class="list">
+        <h2 class="title">月毎の支出の詳細</h2>
+        <p class="content">
+          トップページの「〇年〇月」をクリックすると、月毎の支出の詳細を確認できます
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div class="col-md-8">
     <%= month_calendar events: @blogs do |date, blogs| %>
       <%= link_to blog_path(date, params: { date: "#{date.year}-#{date.month}-#{date.day}" }), class: 'date-link' do %>

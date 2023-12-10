@@ -1,33 +1,59 @@
-<%# <div class="background-image"> %>
-<h2>ログイン</h2>
-
-<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-  <div class='session-form-wrap'>
-    <div class='login-flash-message'>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
-    
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">メールアドレス</label>
-        <span class="indispensable">必須</span>
+<div class="registration">
+  <div class="timeline02 mb-5">
+    <div class="container">
+      <div class="list">
+        <h2 class="title">ユーザーを登録しよう</h2>
+        <p class="content">
+          まずは家族名と２人のユーザーの登録をおこないます
+        </p>
       </div>
-      <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-    </div>
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">パスワード</label>
-        <span class="indispensable">必須</span>
+      <div class="list">
+        <h2 class="title">収支を登録しよう</h2>
+        <p class="content">
+          ユーザーが各自の収支を登録していきます
+        </p>
       </div>
-      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
-    </div>
-    
-    <div class="button-container">
-      <button class="btn">
-        <span class="text">ログイン</span>
-        <span class="icon"></span>
-      </button>
+      <div class="list">
+        <h2 class="title">データを確認しよう</h2>
+        <p class="content">
+          家族で合算されたデータを確認しよう
+        </p>
+      </div>
     </div>
   </div>
-<% end %>
+
+  <div class="session_form">
+    <h2>ログイン</h2>
+
+    <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+      <div class='session-form-wrap'>
+        <div class='login-flash-message'>
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+        
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">メールアドレス</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+        </div>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">パスワード</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+        </div>
+        
+        <div class="button-container">
+          <button class="btn">
+            <span class="text">ログイン</span>
+            <span class="icon"></span>
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 .dairy-main{
-  height: 1200px;
+  height: auto;
   padding: 70px 0;
   font-family: 'Allura', cursive;
   font-family: 'Lobster', sans-serif;
@@ -17,7 +17,7 @@
 .dairy-table{
   /* background-color: #F2F2F3; */
   width: 850px;
-  height: 700px;
+  height: 500px;
   border-radius: 5px solid;
   padding: 70px 60px;
   margin: 0 auto;  
