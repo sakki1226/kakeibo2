@@ -93,7 +93,7 @@ ul {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* 必要に応じて適切な余白を追加 */
+  margin-top: 20px; 
 }
 
 .btn {
@@ -194,7 +194,6 @@ transition-delay: .3s;
   max-width: 780px;
   margin: 0 auto;
   padding: 1.5rem;
-  /* background-color: #f9f9f9; */
   width: 60%;
 }
 
@@ -243,7 +242,7 @@ transition-delay: .3s;
   content: counter(section, decimal-leading-zero);
   font-size: 0.9rem;
   font-weight: bold;
-  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-color: #4a69b8;
   color: #fff;
   border-radius: 30px;
   padding: 5px 8px;
@@ -253,6 +252,7 @@ transition-delay: .3s;
 }
 
 .timeline02 .title {
+  color: #4a69b8;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
