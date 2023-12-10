@@ -37,31 +37,28 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 ## 実装した機能についての画像やGIFおよびその説明※
 
 ユーザー１のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/1d0626073cfd62920f4a535c72dd719e.gif)](https://gyazo.com/1d0626073cfd62920f4a535c72dd719e)
+[![Image from Gyazo](https://i.gyazo.com/92b4dd2cda0e5017c8e7791d62378a8d.gif)](https://gyazo.com/92b4dd2cda0e5017c8e7791d62378a8d)
 
 ユーザー２のログイン画面
-[![Image from Gyazo](https://i.gyazo.com/b9fe254971f3c26ddd9eccaf885468ca.gif)](https://gyazo.com/b9fe254971f3c26ddd9eccaf885468ca)
+[![Image from Gyazo](https://i.gyazo.com/2cfab2538410a08430331c218d8df6bd.gif)](https://gyazo.com/2cfab2538410a08430331c218d8df6bd)
 
 日毎の詳細ページ（家族ごとのデータを合算して表示。登録したユーザーが自分のデータを編集、削除ができる）
-[![Image from Gyazo](https://i.gyazo.com/7593de10faf4f9ac37a80711318c674c.jpg)](https://gyazo.com/7593de10faf4f9ac37a80711318c674c)
+[![Image from Gyazo](https://i.gyazo.com/e58cf88af320fe2597fb50a9270cfe74.png)](https://gyazo.com/e58cf88af320fe2597fb50a9270cfe74)
 
 月毎の一覧・支出の円グラフ・前月比の棒グラフを表示したページ（日付に入ると上記の日毎詳細ページに遷移）
-[![Image from Gyazo](https://i.gyazo.com/73d8cf8520aba08c4cc14cc36f04bac9.gif)](https://gyazo.com/73d8cf8520aba08c4cc14cc36f04bac9)
+[![Image from Gyazo](https://i.gyazo.com/5c091f8b2b9b31a8334b30367380920b.gif)](https://gyazo.com/5c091f8b2b9b31a8334b30367380920b)
 
 収入の登録ページ
-[![Image from Gyazo](https://i.gyazo.com/ab4991c15df03c9efc8994396a54c678.gif)](https://gyazo.com/ab4991c15df03c9efc8994396a54c678)
+[![Image from Gyazo](https://i.gyazo.com/35bf762cef5ccb0f5e2aa1f35206b2fb.gif)](https://gyazo.com/35bf762cef5ccb0f5e2aa1f35206b2fb)
 
 支出の登録ページ
-[![Image from Gyazo](https://i.gyazo.com/decc00ea8b14cd41e138d052b4ab3dda.gif)](https://gyazo.com/decc00ea8b14cd41e138d052b4ab3dda)
+[![Image from Gyazo](https://i.gyazo.com/77a678204d3f7ee6e6009044bfab42e8.gif)](https://gyazo.com/77a678204d3f7ee6e6009044bfab42e8)
 
-新規ユーザー登録ページ①
-[![Image from Gyazo](https://i.gyazo.com/4808847df40ac6630eec592b68c6798b.gif)](https://gyazo.com/4808847df40ac6630eec592b68c6798b)
-
-新規ユーザー登録ページ②
-[![Image from Gyazo](https://i.gyazo.com/04e5b0e6970541582a1136014b51192c.gif)](https://gyazo.com/04e5b0e6970541582a1136014b51192c)
+新規ユーザー登録ページ
+[![Image from Gyazo](https://i.gyazo.com/3646590f42b2c2ad431a4c1eee739e89.gif)](https://gyazo.com/3646590f42b2c2ad431a4c1eee739e89)
 
 ログイン画面
-[![Image from Gyazo](https://i.gyazo.com/e73719aff4dbc8dbb8e50c2da55eb475.gif)](https://gyazo.com/e73719aff4dbc8dbb8e50c2da55eb475)
+[![Image from Gyazo](https://i.gyazo.com/154bf3464f5cd34865a709fdf6b87467.gif)](https://gyazo.com/154bf3464f5cd34865a709fdf6b87467)
 
 ## 実装予定の機能
 ・マイページ<br>
