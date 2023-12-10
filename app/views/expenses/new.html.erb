@@ -1,7 +1,6 @@
-<%# <div class="expense-background-image"> %>
-
+<div class ="expense-main">
+  
   <h1>支出の登録</h1>
-
   <div class="expense-form">
   <%= render "devise/shared/error_messages", resource: @expense %>
     <%= form_with(model: @expense, local: true) do |f| %>

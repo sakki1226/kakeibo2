@@ -2,6 +2,11 @@ h1{
   text-align: center;
 }
 
+.expense-main{
+  height: 1000px;
+  padding: 70px 0;
+}
+
 .expense-form{
   background-color: #F2F2F3;
   width: 850px;

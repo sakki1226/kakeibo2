@@ -1,7 +1,5 @@
 .header {
   display: flex;
-  width: 100%;
-  padding: 0 100px;  
   height: 150px;
   align-items: center;
   background-color: #6FD2E1;
@@ -10,6 +8,7 @@
 .heading,
 .navbar {
   flex: 1; 
+  width: 100%;
 }
 
 .logo{
@@ -26,6 +25,12 @@
   color: black;
 
 }
+.body-bg{
+  font-family: 'Allura', cursive;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
 
 .nav-lists{
   display: flex;
@@ -33,12 +38,22 @@
   list-style: none;
 }
 
+
+.nav-lists__header{
+  display: flex;
+  padding-left: 80px;
+  align-items: end;
+}
+
+.nav-lists__header a{
+  font-size: 30px;
+}
+
 .nav-lists__list{
   font-size: 22px;
   line-height: 100px;
   list-style: none;
 }
-
 
 .btn-menu {
   position: fixed; /* 要素の位置を固定 */
@@ -90,7 +105,7 @@
 }
 
 .menu-list li {
-  margin: 1.5rem 0; /* 上下に1.5remのマージンを設定 */
+  margin: 0.5rem 0; /* 上下に1.5remのマージンを設定 */
   opacity: 0; /* 不透明度を0に設定（初期状態では非表示） */
 }
 
