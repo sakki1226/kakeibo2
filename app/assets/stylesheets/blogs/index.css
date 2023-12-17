@@ -32,18 +32,18 @@
 }
 
 .mb-5 {
-  margin-bottom: 5rem;
+  margin-bottom: 80px;
 }
 
 .timeline01 .list {
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 32px;
+  padding-bottom: 32px;
   counter-increment: section;
   position: relative;
 }
 
 .timeline01 .list:last-child {
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
 }
 
 .timeline01 .list::before {
@@ -58,7 +58,7 @@
 
 .timeline01 .list::after {
   content: counter(section, decimal-leading-zero);
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: bold;
   background-color: #4a69b8;
   color: #fff;
@@ -69,14 +69,14 @@
   border-radius: 50%;
   position: absolute;
   top: 0;
-  left: -0.8rem;
+  left: -14px;
 }
 
 .timeline01 .title {
   color: #4a69b8;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 19px;
+  margin-bottom: 14px;
   text-align: left;
 }
 

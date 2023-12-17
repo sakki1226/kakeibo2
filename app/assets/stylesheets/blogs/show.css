@@ -38,7 +38,7 @@
 
 .income-list th
 .income-list td{
-  padding: 1rem;
+  padding: 16px;
   border-right: 1px solid #fff;
   vertical-align: middle;
 }
