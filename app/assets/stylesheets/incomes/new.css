@@ -3,14 +3,14 @@ h1{
 }
 
 .income-main{
-  height: 1000px;
-  padding: 70px 0;
+  height: 700px;
+
 }
 
 .income-form{
   background-color: #F2F2F3;
   width: 850px;
-  height: 800px;
+  height: 500px;
   border-radius: 5px solid;
   padding: 70px 60px;
   margin: 0 auto;  
