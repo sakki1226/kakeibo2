@@ -62,6 +62,7 @@ https://docs.google.com/spreadsheets/d/1E96JTc1ybsUnWgsrSLKQ15x9WdxPlv5usPx5OmsT
 
 ## 実装予定の機能
 ・マイページ<br>
+・カテゴリー別の分析データページ
 
 
 ## データベース設計

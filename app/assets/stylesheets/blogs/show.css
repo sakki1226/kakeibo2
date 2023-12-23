@@ -1,6 +1,6 @@
 .dairy-main{
   height: auto;
-  padding: 70px 0;
+  padding: 20px 0;
   font-family: 'Allura', cursive;
   font-family: 'Lobster', sans-serif;
   font-family: 'Parisienne', cursive;
@@ -11,15 +11,14 @@
   text-align: center;
   font-size: 30px;
   font-weight: 600;
-  margin: 20px 0 ;
+  margin: 10px 0 ;
 }
 
 .dairy-table{
-  /* background-color: #F2F2F3; */
   width: 850px;
   height: 500px;
   border-radius: 5px solid;
-  padding: 70px 60px;
+  padding: 40px 60px;
   margin: 0 auto;  
   text-align: center;
 }
@@ -27,6 +26,10 @@
 .income-list{
   max-width: 650px;
   margin: 0 auto;
+}
+
+.income-table{
+  margin-bottom: 40px;
 }
 
 .income-header {
