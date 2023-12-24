@@ -33,6 +33,7 @@ class BlogsController < ApplicationController
     @month = params[:month].to_i
     family = current_user.family
     family_users = family.users
+    @family_users = family_users
 
     @total_income_by_family = 0
     @total_expense_by_family = 0

@@ -2,7 +2,7 @@
   <div class="calendar-heading">
     <%= link_to '<<', calendar.url_for_previous_view %>
     <span class="calendar-title">
-      <%= link_to "#{start_date.year}年#{start_date.month}月", expenses_by_month_path(year: start_date.year, month: start_date.month) %>
+      <%= link_to "#{start_date.year}年#{start_date.month}月", expenses_by_month_blogs_path(year: start_date.year, month: start_date.month) %>
     </span>
     <%= link_to '>>', calendar.url_for_next_view %>
   </div>

@@ -57,8 +57,7 @@
             </button>
             <ul class="menu-list">
                 <% if user_signed_in? %>
-                  <li class="nav-lists__list"><%= link_to current_user.nickname, "#" %></li>
-                  <li class="nav-lists__list"><%= link_to '個人データ', "#" %></li>
+                  <li class="nav-lists__list"><%= link_to 'マイページ', "/users/#{current_user.id}" %></li>
                   <li class="nav-lists__list"><%= link_to 'カテゴリー別', "#" %></li>
                   <li class="nav-lists__list"><%= link_to 'ホーム', root_path %></li>
                 <% else %>

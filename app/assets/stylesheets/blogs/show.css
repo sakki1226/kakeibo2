@@ -16,7 +16,7 @@
 
 .dairy-table{
   width: 850px;
-  height: 500px;
+  height: auto;
   border-radius: 5px solid;
   padding: 40px 60px;
   margin: 0 auto;  
@@ -53,7 +53,7 @@
 
 .income-list thead tr{
   background-color: #6FD2E1;
-  color: #fff;
+  color: black;
   height: 40px;
 }
 

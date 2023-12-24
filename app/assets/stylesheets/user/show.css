@@ -1,0 +1,56 @@
+.month_select_box{
+  text-align: center;
+  margin: 50px 0 150px 0;
+}
+
+.user_month_table{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.month_category_table{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.total-list{
+  margin-bottom: 80px;
+}
+
+.total-list th
+.total-list td{
+  padding: 16px;
+  border-right: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.total-list:last-child,
+.total-list:last-child {
+  border-right: 0;
+}
+
+.total-list thead tr{
+  background-color: #6FD2E1;
+  color: black;
+  height: 40px;
+}
+
+.total-list thead th {
+  text-align: center;
+}
+
+.total-list tbody tr {
+  border-bottom: 1px solid #fff;
+  background-color: #f1f3f8;
+  height: 40px;
+}
+
+.total-list tbody tr:last-child {
+  border: none;
+}
+
+.total-list tbody th {
+  width: 25%;
+}

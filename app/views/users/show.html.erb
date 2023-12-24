@@ -1,0 +1,142 @@
+<div class="month_select_box">
+  <h2>マイページ</h2>
+  <%= form_tag(user_path(current_user), method: :get) do %>
+    <%= select_tag 'year', options_for_select((Date.current.year - 5..Date.current.year).map { |y| [y, y] }, @year), prompt: '年を選択してください' %>
+    <%= select_tag 'month', options_for_select((1..12).map { |m| [I18n.t('date.month_names')[m], m] }, @month), prompt: '月を選択してください' %>
+    <%= submit_tag '表示' %>
+  <% end %>
+</div>
+
+<div class="user_month_table">
+  <div class="user_month_income_table">
+    <h3 class="total_income_price">収入合計: <%= @total_income %> 円</h3>
+    <table class="income-list"  width="600" align="center">
+      <thead>
+        <tr>
+          <th width="200">日付</th>
+          <th width="200">内容</th>
+          <th width="200">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @incomes.each do |income| %>
+          <tr>
+            <td width="200" align="center"><%= income.date.day %>日</td>
+            <% income_category = IncomeCategory.find(income.income_category_id) %>
+            <td width="200" align="center"><%= income_category.name %></td>
+            <td width="200" align="center"><%= income.price %>円</td>
+          </tr>
+        <% end %>
+        <tr>
+          <td align="center">
+          <strong>合計</strong></td>
+          <td></td>
+          <td align="center"><strong><%= @total_income %> 円</strong></td>
+        </tr>
+      </tbody>        
+    </table>
+  </div>
+
+  <div class="user_month_expense_table">
+    <h3>支出合計: <%= @total_expense %> 円</h3>
+    <table class="income-list" width="1000"  align="center">
+      <thead>
+        <tr>
+          <th width="250">日付</th>
+          <th width="250">内容</th>
+          <th width="250">支払方法</th>
+          <th width="250">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @expenses.each do |expense| %>
+          <tr>  
+            <td align="center"><%= expense.date.day %>日</td>
+            <% expense_category = ExpenseCategory.find(expense.expense_category_id) %>
+            <td align="center"><%= expense_category.name %></td>
+            <% method = PaymentMethod.find(expense.payment_method_id) %>
+            <td align="center"><%= method.name %></td>
+            <td align="center"><%= expense.price %>円</td>
+          </tr>
+        <% end %>
+        <tr>
+          <td align="center">
+          <strong>合計</strong></td>
+          <td></td>
+          <td></td>
+          <td align="center"><strong><%= @total_expense %> 円</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="month_category_table">
+  <div class="month_category_total_list">
+    <table class="total-list"   align="center">
+    <h3>前月比（変動費）</h3>
+      <thead>
+        <tr>
+          <td width="80"></td>
+          <% ExpenseCategory.where(id: 2..9).each do |category| %>
+          <th width="80"><%= category.name%>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td  align="center"   >今月合計</td>
+        <% total_price = 0 %>
+        <% ExpenseCategory.where(id: 2..9).each do |category| %>
+          <td align="center">
+            <% if @expenses.present? %>
+              <% filtered_expenses = @expenses.where(expense_category_id: category.id) %>
+              <% price = filtered_expenses.sum(:price) %>
+              <% total_price += price %>
+              <span><%= price %>円</span>
+            <% end %>
+            </td>
+          <% end %>
+        </tr>
+        <td align="center">先月合計</td>
+        <% ExpenseCategory.where(id: 2..9).each do |category| %>
+          <td align="center"><%= @previous_month_category_totals[category.id] || 0 %>円</td>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="month_category_total_list">
+    <table class="total-list"   align="center">
+    <h3>前月比（固定費）</h3>
+      <thead>
+        <tr>
+          <td width="80"></td>
+          <% ExpenseCategory.where(id: 10..17).each do |category| %>
+          <th width="80"><%= category.name%>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td  align="center"   >今月合計</td>
+        <% total_price = 0 %>
+        <% ExpenseCategory.where(id: 10..17).each do |category| %>
+          <td align="center">
+            <% if @expenses.present? %>
+              <% filtered_expenses = @expenses.where(expense_category_id: category.id) %>
+              <% price = filtered_expenses.sum(:price) %>
+              <% total_price += price %>
+              <span><%= price %>円</span>
+            <% end %>
+            </td>
+          <% end %>
+        </tr>
+        <td align="center">先月合計</td>
+        <% ExpenseCategory.where(id: 10..17).each do |category| %>
+          <td align="center"><%= @previous_month_category_totals[category.id] || 0 %>円</td>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -4,13 +4,25 @@
       <div class="monthly_balance_of_payment">
         <table class="monthly_total_list">
           <thead>
+            <th width="400"></th>
             <th width="400">当月収入</th>
             <th width="400"></th>
             <th width="400">当月支出</th>
             <th width="400"></th>
             <th width="400">当月収支</th>
-          </thead>
+          </thead>          
+          <% @family_users.each do |user| %>
+            <tr>
+              <td><%= "#{user.nickname}" %></td>
+              <td><%= user.incomes.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1)).sum(:price) %>円</td>
+              <td>-</td>
+              <td><%= user.expenses.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1)).sum(:price) %>円</td>
+              <td>=</td>
+              <td><%= user.incomes.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1)).sum(:price) - user.expenses.where(date: Date.new(@year, @month, 1)..Date.new(@year, @month, -1)).sum(:price) %>円</td>
+            </tr>
+          <% end %>
           <tr>
+            <td>合計</td>
             <td><%= @total_income_by_family %>円</td>
             <td>-</td>
             <td><%= @total_expense_by_family %>円</td>
@@ -23,7 +35,7 @@
 
 
   <div class="month_list">
-    <table  border="1" align="center">
+    <table  border="1"  align="center">
       <thead>
         <tr>
           <th width="80">日付</th>
@@ -123,7 +135,7 @@
     <div class= "pie-chart">
       <p>支出の円グラフ</p>
       <%= pie_chart @category_expense_totals, colors: ["#FFC0CB", "#ADD8E6", "lightyellow"] %>
-      <p><%= @expenses.sum(:price) %>円</p>
+      <p>今月の支出：<%= @expenses.sum(:price) %>円</p>
     </div>
     <div class= "bar_chart">
       <p>各支出の前月比</p>

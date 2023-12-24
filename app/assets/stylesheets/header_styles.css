@@ -57,7 +57,7 @@
 
 .btn-menu {
   position: fixed;
-  right: 64px; 
+  right: 40px; 
   top: 48px; 
   z-index: 4; 
   padding: 8px 16px; 
