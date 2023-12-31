@@ -140,3 +140,43 @@
     </table>
   </div>
 </div>
+
+<div class="group">
+  <% @payment_methods.each_slice(2) do |methods_group| %>
+    <div class="column">
+      <% methods_group.each do |method| %>
+        <div class="method-table">
+          <h3><%= method.name %></h3>
+          <table class="income-list" width="450" align="center">
+          <thead>
+            <tr>
+              <th width="150">日付</th>
+              <th width="150">内容</th>
+              <th width="150">金額</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @expenses_by_method[method.name][:expenses].each do |expense| %>
+              <tr>  
+                <td align="center"><%= expense.date.day %>日</td>
+                <% expense_category = ExpenseCategory.find(expense.expense_category_id) %>
+                <td align="center"><%= expense_category.name %></td>
+                <td align="center"><%= expense.price %>円</td>
+              </tr>
+            <% end %>
+            <tr>
+              <td align="center">
+                <strong>合計</strong>
+              </td>
+              <td></td>
+              <td align="center">
+                <strong><%= @expenses_by_method[method.name][:total_expense] %> 円</strong>
+              </td>
+            </tr>
+          </tbody>
+            </table>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

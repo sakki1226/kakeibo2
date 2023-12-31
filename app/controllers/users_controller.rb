@@ -20,5 +20,17 @@ class UsersController < ApplicationController
       @previous_month_category_totals[category.id] = total_price
     end
     @previous_month_total_expense = @previous_month_expenses.sum(:price)
+
+    @payment_methods = PaymentMethod.where(id: 2..6)
+    @expenses_by_method = {}
+
+    @payment_methods.each do |method|
+      expenses_for_method = @expenses.where(payment_method_id: method.id)
+      total_expense_for_method = expenses_for_method.sum(:price)
+      @expenses_by_method[method.name] = {
+        expenses: expenses_for_method,
+        total_expense: total_expense_for_method
+      }
+    end
   end
 end
