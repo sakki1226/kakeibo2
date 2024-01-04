@@ -96,5 +96,15 @@
 }
 
 @media (max-width: 599px) {
-  
+  .timeline01 .title {
+    font-size: 14px;
+  }
+
+  .timeline01 .content {
+    font-size: 10px;
+  }
+
+  .sub_bar{
+    margin-left: 2px;
+  }
 }
