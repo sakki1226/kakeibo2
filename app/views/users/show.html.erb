@@ -21,7 +21,12 @@
       <tbody>
         <% @incomes.each do |income| %>
           <tr>
-            <td width="200" align="center"><%= income.date.day %>日</td>
+            <td width="200" align="center">
+              <% current_date = Date.new(@year, @month, income.date.day) %>
+              <%= link_to blog_path(current_date, params: { date: "#{current_date.year}-#{current_date.month}-#{current_date.day}" }), class:"date-number" do %>
+                <%= income.date.day %>日
+              <% end %>
+            </td>
             <% income_category = IncomeCategory.find(income.income_category_id) %>
             <td width="200" align="center"><%= income_category.name %></td>
             <td width="200" align="center"><%= income.price %>円</td>
@@ -51,7 +56,13 @@
       <tbody>
         <% @expenses.each do |expense| %>
           <tr>  
-            <td align="center"><%= expense.date.day %>日</td>
+            <td align="center">
+              <% current_date = Date.new(@year, @month, expense.date.day) %>
+              <%= link_to blog_path(current_date, params: { date: "#{current_date.year}-#{current_date.month}-#{current_date.day}" }), class:"date-number" do %>
+                <%= expense.date.day %>日
+              <% end %>
+            </td>
+            
             <% expense_category = ExpenseCategory.find(expense.expense_category_id) %>
             <td align="center"><%= expense_category.name %></td>
             <% method = PaymentMethod.find(expense.payment_method_id) %>
