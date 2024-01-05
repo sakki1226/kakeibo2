@@ -42,7 +42,7 @@
 
 .nav-lists__header{
   display: flex;
-  padding-left: 80px;
+  padding-left: 60px;
   align-items: end;
 }
 
@@ -184,9 +184,13 @@ p.copyright {
   .nav-lists__header a{
     font-size: 12px;
   }
+}
 
   .logo{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 200;
   }
+
+  .nav-lists__header{
+    padding-left: 20px;
 }
