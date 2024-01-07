@@ -7,8 +7,7 @@
 
 .income_expense_manthly_total{
   text-align: center;
-  font-size: 20px;
-  font-weight: 600; 
+
 }
 
 .monthly_balance_of_payment{
@@ -21,15 +20,17 @@
 }
 
 .monthly_total_list{
-  max-width: 650px;
+  width: 50%;
   margin: 0 auto;
 }
 
-.monthly_total_list th
+.monthly_total_list thead th,
 .monthly_total_list td{
   padding: 16px;
   border-right: 1px solid #fff;
   vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600; 
 }
 
 .monthly_total_list:last-child,
@@ -66,6 +67,11 @@
   margin: 0 auto;
   width: 90%;
   text-align: center;
+}
+
+.month_list th,
+.month_list td{
+  font-size: 12px;
 }
 
 table {
@@ -126,3 +132,43 @@ tr:nth-child(even) {
   display: none;
 }
 
+
+@media (max-width: 1024px) {
+  .month_list thead th{
+    font-size: 8px;
+  }
+  .month_list tbody td{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 599px) {
+  h1{
+    font-size: 24px;
+  }
+
+  .monthly_balance_of_payment{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .monthly_total_list thead th,
+  .monthly_total_list td{
+    font-size: 12px;
+
+  }
+
+  
+
+  .month_list thead th{
+    font-size: 8px;
+    writing-mode: vertical-rl;
+  }
+  .month_list tbody td{
+    font-size: 10px;
+  }
+
+  .month_list tbody td a{
+    font-size: 10px;
+  }
+}

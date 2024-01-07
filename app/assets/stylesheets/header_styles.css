@@ -117,14 +117,13 @@
 
 footer.footer01 {
   padding-top: 10px;
-  margin: 0;
   background: #6FD2E1;
   height: 100px;
 
 }
 
 .footer-container {
-  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -148,33 +147,9 @@ p.copyright {
   text-align: center;
   color: black;
   background-color: #6FD2E1;
+  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  footer.footer01 {
-    padding: 32px 16px 16px;
-  }
-
- .footer-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 414px;
-    margin-bottom: 32px;
-  }
-
-  div.logo {
-    margin-bottom: 24px;
-  }
-
-  nav.nav ul.item {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
- nav.nav ul.item li.list {
-    padding: 8px;
-  }
-}
 
 @media (max-width: 1024px) {
 
@@ -184,7 +159,6 @@ p.copyright {
   .nav-lists__header a{
     font-size: 12px;
   }
-}
 
   .logo{
     font-size: 30px;
@@ -193,4 +167,5 @@ p.copyright {
 
   .nav-lists__header{
     padding-left: 20px;
+  }
 }
