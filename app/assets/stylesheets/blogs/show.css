@@ -82,7 +82,7 @@
 
 
 .edit_btn, .delete_btn {
-  font-size: 16px; 
+  font-size: 12px; 
   font-weight: bold; 
   color: #2c3e50; 
   position: relative;
@@ -106,5 +106,17 @@
 }
 
 @media (max-width: 599px) {
-  
+  h3{
+    font-size: 12px;
+  }
+
+  .income-list thead th,
+  .income-list tbody td{
+      font-size: 10px;
+  }
+
+  .income-list tbody td a{
+    font-size: 10px;
+  }
+
 }

@@ -10,10 +10,10 @@
       <table class="income-list">
           <thead>
             <tr>
-              <th width="250">ユーザー</th>
-              <th width="250">種類</th>
-              <th width="250">金額</th>
-              <th width="250"></th>
+              <th>ユーザー</th>
+              <th>種類</th>
+              <th>金額</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -22,7 +22,7 @@
                 <td align="center"><%= income.user.nickname %></td>
                 <td align="center"><%= IncomeCategory.find(income.income_category_id).name %></td>
                 <td align="center"><%= income.price %> 円</td>
-                <% if current_user.id == income.user_id %>
+                <% if user_signed_in? && current_user.id == income.user_id %>
                   <td align="center">
                   <%= link_to '編集', edit_income_path(income), class:"edit_btn"  %>
                   <%= link_to '削除', income_path(income), data: { turbo_method: :delete }, class:"delete_btn"  %>
@@ -40,14 +40,13 @@
     <div class="expense-table">
       <h2 class="expense-header">支出</h2>
       <table class="income-list">
-      <%# <table  border="1" align="center"> %>
         <thead>
           <tr>
-            <th width="200">ユーザー</th>
-            <th width="200">種類</th>
-            <th width="200">支払方法</th>
-            <th width="200">金額</th>
-            <th width="200"></th>
+            <th>ユーザー</th>
+            <th>種類</th>
+            <th>支払方法</th>
+            <th>金額</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -57,7 +56,7 @@
               <td align="center"><%= ExpenseCategory.find(expense.expense_category_id).name %></td>
               <td align="center"><%= PaymentMethod.find(expense.payment_method_id).name %></td>
               <td align="center"><%= expense.price %> 円</td>
-              <% if current_user.id == expense.user_id %>
+              <% if user_signed_in? && current_user.id == expense.user_id %>
                 <td align="center">
                 <%= link_to '編集', edit_expense_path(expense), class:"edit_btn" %>
                 <%= link_to '削除', expense_path(expense), data: { turbo_method: :delete }, class:"delete_btn"  %>

@@ -5,15 +5,23 @@
 
 .user_month_table{
   display: flex;
-  padding: 0 50px;
   justify-content: space-between;
   margin: 50px;
+}
+
+.user_month_expense_table,
+.user_month_income_table{
+  width: 50%;
 }
 
 .month_category_table{
   display: flex;
   justify-content: space-between;
   margin: 50px;
+}
+
+.month_category_total_list{
+  width: 45%;
 }
 
 .total-list{
@@ -36,6 +44,7 @@
   background-color: #6FD2E1;
   color: black;
   height: 40px;
+  font-size: 12px;
 }
 
 .total-list thead th {
@@ -52,10 +61,63 @@
   border: none;
 }
 
-.total-list tbody th {
-  width: 25%;
+.total-list tbody td {
+  font-size: 12px;
 }
 
 .group{
   margin-bottom: 50px;
+}
+
+.payment_method_list tbody td{
+  font-size: 12px;
+}
+
+
+.payment_method_list{
+  width: 40%;
+}
+
+.payment_method_list th
+.payment_method_list td{
+  padding: 16px;
+  border-right: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.payment_method_list:last-child,
+.payment_method_list:last-child {
+  border-right: 0;
+}
+
+.payment_method_list thead tr{
+  background-color: #6FD2E1;
+  color: black;
+  height: 40px;
+}
+
+.payment_method_list thead th {
+  text-align: center;
+}
+
+.payment_method_list tbody tr {
+  border-bottom: 1px solid #fff;
+  background-color: #f1f3f8;
+  height: 40px;
+}
+
+.payment_method_list tbody tr:last-child {
+  border: none;
+}
+
+.payment_method_list tbody th {
+  width: 25%;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 599px) {
+  
 }

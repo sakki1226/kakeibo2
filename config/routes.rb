@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   resources :incomes
   resources :expenses
   resources :families
-  resources :users, only: :show
+  resources :users, only: [:show, :edit, :update]
   
 end
