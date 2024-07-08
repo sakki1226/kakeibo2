@@ -8,7 +8,7 @@
 https://kakeibo2.onrender.com/
 
 ## テスト用アカウント
-・Basic 認証パスワード：1006<br>
+・Basic 認証パスワード：2222<br>
 ・Basic 認証ID：admin<br>
 <山田家><br>
 ユーザー① メールアドレス→test@test  パスワード→111111<br>
